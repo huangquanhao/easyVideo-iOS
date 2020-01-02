@@ -1,0 +1,40 @@
+PODS:
+  - CocoaLumberjack (3.6.0):
+    - CocoaLumberjack/Core (= 3.6.0)
+  - CocoaLumberjack/Core (3.6.0)
+  - JCore (2.1.8)
+  - JLRoutes (2.1)
+  - JPush (3.2.8):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - MJRefresh (3.3.1)
+  - SDWebImage (5.4.1):
+    - SDWebImage/Core (= 5.4.1)
+  - SDWebImage/Core (5.4.1)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - JLRoutes
+  - JPush
+  - MJRefresh
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CocoaLumberjack
+    - JCore
+    - JLRoutes
+    - JPush
+    - MJRefresh
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
+  JCore: a7f1dead960d77a97717c73ea8b0aa5b33706491
+  JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
+  JPush: 8ce888d6dedfa417e90c8b6bc87405a16ce2e699
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
+
+PODFILE CHECKSUM: 9aea19060384a9986ec82e89371516b07773fdb7
+
+COCOAPODS: 1.8.4
