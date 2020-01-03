@@ -5,4 +5,5 @@ pod 'CocoaLumberjack'
 pod 'MJRefresh'
 pod 'SDWebImage'
 pod 'HQHUtils', '1.0.4'
+pod 'IQKeyboardManager'
 end

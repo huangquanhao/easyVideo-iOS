@@ -3,3 +3,4 @@
 //
 #import "HQHUtils.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>

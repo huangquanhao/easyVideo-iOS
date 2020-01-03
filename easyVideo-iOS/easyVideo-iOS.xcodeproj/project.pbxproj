@@ -41,6 +41,7 @@
 		FCA897D423BF3D3600A0C78E /* PrivateJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897D223BF3D3600A0C78E /* PrivateJoinVC.swift */; };
 		FCA897D523BF3D3600A0C78E /* PrivateJoinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA897D323BF3D3600A0C78E /* PrivateJoinVC.xib */; };
 		FCA897D723BF406800A0C78E /* PrivateJoinVC+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897D623BF406800A0C78E /* PrivateJoinVC+EXT.swift */; };
+		FCA897D923BF45F600A0C78E /* AppDelegate+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897D823BF45F600A0C78E /* AppDelegate+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		FCA897D223BF3D3600A0C78E /* PrivateJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateJoinVC.swift; sourceTree = "<group>"; };
 		FCA897D323BF3D3600A0C78E /* PrivateJoinVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivateJoinVC.xib; sourceTree = "<group>"; };
 		FCA897D623BF406800A0C78E /* PrivateJoinVC+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrivateJoinVC+EXT.swift"; sourceTree = "<group>"; };
+		FCA897D823BF45F600A0C78E /* AppDelegate+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 			children = (
 				FCA897CC23BF3BA100A0C78E /* UIViewControllerEXT */,
 				FCA897B023BF0EDE00A0C78E /* UIViewExtension.swift */,
+				FCA897D823BF45F600A0C78E /* AppDelegate+EXT.swift */,
 				FCA897B223BF0F0000A0C78E /* UITabBarControllerExtension.swift */,
 				FCA897B823BF1F8A00A0C78E /* BaseVC+jump.swift */,
 			);
@@ -427,6 +430,7 @@
 				FCA897A323BF0A3F00A0C78E /* ChatVC.swift in Sources */,
 				FCA8979B23BF0A0F00A0C78E /* MeetingVC.swift in Sources */,
 				FCA897D723BF406800A0C78E /* PrivateJoinVC+EXT.swift in Sources */,
+				FCA897D923BF45F600A0C78E /* AppDelegate+EXT.swift in Sources */,
 				FCA897CB23BF3B9D00A0C78E /* CloudVC+EXT.swift in Sources */,
 				FCA897C923BF370E00A0C78E /* PrivateVC+EXT.swift in Sources */,
 				FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */,
