@@ -1,0 +1,1 @@
+../../../HQHUtils/HQHUtils/HQHUtils/Tools/CodingTools.h
