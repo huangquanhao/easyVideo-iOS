@@ -2,6 +2,7 @@ PODS:
   - CocoaLumberjack (3.6.0):
     - CocoaLumberjack/Core (= 3.6.0)
   - CocoaLumberjack/Core (3.6.0)
+  - HQHUtils (1.0.4)
   - MJRefresh (3.3.1)
   - SDWebImage (5.4.1):
     - SDWebImage/Core (= 5.4.1)
@@ -9,20 +10,23 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack
+  - HQHUtils (= 1.0.4)
   - MJRefresh
   - SDWebImage
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - CocoaLumberjack
+    - HQHUtils
     - MJRefresh
     - SDWebImage
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
+  HQHUtils: a2d0f31186a6feabc9c308da58b02bc0fff160a7
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
 
-PODFILE CHECKSUM: 39e93dbe7ff7adce423241877048cb7d5dff7e57
+PODFILE CHECKSUM: 37202c5499fba857a1efb46bb09e5a8a546a0c90
 
 COCOAPODS: 1.8.4

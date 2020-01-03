@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MeetingVC.swift
 //  easyVideo-iOS
 //
 //  Created by quanhao huang on 2020/1/3.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MeetingVC: BaseViewController {
 
+    @IBOutlet weak var companyLb: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.PresentLoginVCPage(animated: true, presentStyle: .fullScreen)
+        
     }
-
-
+    
 }
-
