@@ -1,5 +1,5 @@
 //
-//  CloudVC.swift
+//  PrivateLoginVC.swift
 //  easyVideo-iOS
 //
 //  Created by quanhao huang on 2020/1/3.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CloudVC: BaseViewController {
+class PrivateLoginVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

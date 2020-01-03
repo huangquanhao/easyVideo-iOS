@@ -29,4 +29,11 @@ extension BaseViewController {
         cloud.modalPresentationStyle = style
         self.present(cloud, animated: flag, completion: nil)
     }
+    
+    /// 跳转PrivateJoinVC
+    func PresentPrivateJoinVCPage(animated flag: Bool, presentStyle style: UIModalPresentationStyle) {
+        let privatejoinVC = PrivateJoinVC()
+        privatejoinVC.modalPresentationStyle = style
+        self.present(privatejoinVC, animated: flag, completion: nil)
+    }
 }

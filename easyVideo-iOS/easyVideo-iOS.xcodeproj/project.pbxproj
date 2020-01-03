@@ -33,8 +33,14 @@
 		FCA897BD23BF1FD200A0C78E /* PrivateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA897BB23BF1FD200A0C78E /* PrivateVC.xib */; };
 		FCA897C023BF1FE800A0C78E /* CloudVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897BE23BF1FE800A0C78E /* CloudVC.swift */; };
 		FCA897C123BF1FE800A0C78E /* CloudVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA897BF23BF1FE800A0C78E /* CloudVC.xib */; };
-		FCA897C323BF24A000A0C78E /* VC.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA897C223BF24A000A0C78E /* VC.plist */; };
-		FCA897C723BF2B3C00A0C78E /* LoginVC+ET.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897C623BF2B3C00A0C78E /* LoginVC+ET.swift */; };
+		FCA897C723BF2B3C00A0C78E /* LoginVC+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897C623BF2B3C00A0C78E /* LoginVC+EXT.swift */; };
+		FCA897C923BF370E00A0C78E /* PrivateVC+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897C823BF370D00A0C78E /* PrivateVC+EXT.swift */; };
+		FCA897CB23BF3B9D00A0C78E /* CloudVC+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897CA23BF3B9D00A0C78E /* CloudVC+EXT.swift */; };
+		FCA897D023BF3D2700A0C78E /* PrivateLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897CE23BF3D2700A0C78E /* PrivateLoginVC.swift */; };
+		FCA897D123BF3D2700A0C78E /* PrivateLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA897CF23BF3D2700A0C78E /* PrivateLoginVC.xib */; };
+		FCA897D423BF3D3600A0C78E /* PrivateJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897D223BF3D3600A0C78E /* PrivateJoinVC.swift */; };
+		FCA897D523BF3D3600A0C78E /* PrivateJoinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA897D323BF3D3600A0C78E /* PrivateJoinVC.xib */; };
+		FCA897D723BF406800A0C78E /* PrivateJoinVC+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA897D623BF406800A0C78E /* PrivateJoinVC+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,8 +75,14 @@
 		FCA897BB23BF1FD200A0C78E /* PrivateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivateVC.xib; sourceTree = "<group>"; };
 		FCA897BE23BF1FE800A0C78E /* CloudVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVC.swift; sourceTree = "<group>"; };
 		FCA897BF23BF1FE800A0C78E /* CloudVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudVC.xib; sourceTree = "<group>"; };
-		FCA897C223BF24A000A0C78E /* VC.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = VC.plist; sourceTree = "<group>"; };
-		FCA897C623BF2B3C00A0C78E /* LoginVC+ET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+ET.swift"; sourceTree = "<group>"; };
+		FCA897C623BF2B3C00A0C78E /* LoginVC+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+EXT.swift"; sourceTree = "<group>"; };
+		FCA897C823BF370D00A0C78E /* PrivateVC+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrivateVC+EXT.swift"; sourceTree = "<group>"; };
+		FCA897CA23BF3B9D00A0C78E /* CloudVC+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CloudVC+EXT.swift"; sourceTree = "<group>"; };
+		FCA897CE23BF3D2700A0C78E /* PrivateLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateLoginVC.swift; sourceTree = "<group>"; };
+		FCA897CF23BF3D2700A0C78E /* PrivateLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivateLoginVC.xib; sourceTree = "<group>"; };
+		FCA897D223BF3D3600A0C78E /* PrivateJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateJoinVC.swift; sourceTree = "<group>"; };
+		FCA897D323BF3D3600A0C78E /* PrivateJoinVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivateJoinVC.xib; sourceTree = "<group>"; };
+		FCA897D623BF406800A0C78E /* PrivateJoinVC+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrivateJoinVC+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +135,7 @@
 		FCA8976B23BEF1B300A0C78E /* easyVideo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FCA8978523BF057600A0C78E /* LoginPage */,
-				FCA8978423BF057300A0C78E /* HomePage */,
-				FCA8978323BF057100A0C78E /* VideoPage */,
-				FCA8978223BF056F00A0C78E /* WhiteBoardPage */,
+				FCA897CD23BF3C7E00A0C78E /* ViewController */,
 				FCA8979623BF090B00A0C78E /* BaseClass */,
 				FCA897AD23BF0E6100A0C78E /* ExtensionClass */,
 				FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */,
@@ -135,7 +144,6 @@
 				FCA8977723BEF1B600A0C78E /* LaunchScreen.storyboard */,
 				FCA8977A23BEF1B600A0C78E /* Info.plist */,
 				FCA8978D23BF077000A0C78E /* easyVideo-iOS-Bridging-Header.h */,
-				FCA897C223BF24A000A0C78E /* VC.plist */,
 			);
 			path = "easyVideo-iOS";
 			sourceTree = "<group>";
@@ -191,6 +199,10 @@
 			children = (
 				FCA897BA23BF1FD200A0C78E /* PrivateVC.swift */,
 				FCA897BB23BF1FD200A0C78E /* PrivateVC.xib */,
+				FCA897CE23BF3D2700A0C78E /* PrivateLoginVC.swift */,
+				FCA897CF23BF3D2700A0C78E /* PrivateLoginVC.xib */,
+				FCA897D223BF3D3600A0C78E /* PrivateJoinVC.swift */,
+				FCA897D323BF3D3600A0C78E /* PrivateJoinVC.xib */,
 			);
 			path = PrivateServer;
 			sourceTree = "<group>";
@@ -252,12 +264,34 @@
 		FCA897AD23BF0E6100A0C78E /* ExtensionClass */ = {
 			isa = PBXGroup;
 			children = (
+				FCA897CC23BF3BA100A0C78E /* UIViewControllerEXT */,
 				FCA897B023BF0EDE00A0C78E /* UIViewExtension.swift */,
 				FCA897B223BF0F0000A0C78E /* UITabBarControllerExtension.swift */,
 				FCA897B823BF1F8A00A0C78E /* BaseVC+jump.swift */,
-				FCA897C623BF2B3C00A0C78E /* LoginVC+ET.swift */,
 			);
 			path = ExtensionClass;
+			sourceTree = "<group>";
+		};
+		FCA897CC23BF3BA100A0C78E /* UIViewControllerEXT */ = {
+			isa = PBXGroup;
+			children = (
+				FCA897C623BF2B3C00A0C78E /* LoginVC+EXT.swift */,
+				FCA897C823BF370D00A0C78E /* PrivateVC+EXT.swift */,
+				FCA897CA23BF3B9D00A0C78E /* CloudVC+EXT.swift */,
+				FCA897D623BF406800A0C78E /* PrivateJoinVC+EXT.swift */,
+			);
+			path = UIViewControllerEXT;
+			sourceTree = "<group>";
+		};
+		FCA897CD23BF3C7E00A0C78E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCA8978523BF057600A0C78E /* LoginPage */,
+				FCA8978423BF057300A0C78E /* HomePage */,
+				FCA8978323BF057100A0C78E /* VideoPage */,
+				FCA8978223BF056F00A0C78E /* WhiteBoardPage */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA897D523BF3D3600A0C78E /* PrivateJoinVC.xib in Resources */,
 				FCA897BD23BF1FD200A0C78E /* PrivateVC.xib in Resources */,
 				FCA897A823BF0A4B00A0C78E /* ContactVC.xib in Resources */,
 				FCA8979C23BF0A0F00A0C78E /* MeetingVC.xib in Resources */,
@@ -328,7 +363,7 @@
 				FCA8977623BEF1B600A0C78E /* Assets.xcassets in Resources */,
 				FCA897C123BF1FE800A0C78E /* CloudVC.xib in Resources */,
 				FCA897AC23BF0A5600A0C78E /* MeVC.xib in Resources */,
-				FCA897C323BF24A000A0C78E /* VC.plist in Resources */,
+				FCA897D123BF3D2700A0C78E /* PrivateLoginVC.xib in Resources */,
 				FCA897A023BF0A2200A0C78E /* JoinMeetingVC.xib in Resources */,
 				FCA897B723BF1F0700A0C78E /* LoginVC.xib in Resources */,
 				FCA897A423BF0A3F00A0C78E /* ChatVC.xib in Resources */,
@@ -387,10 +422,15 @@
 			files = (
 				FCA897B623BF1F0700A0C78E /* LoginVC.swift in Sources */,
 				FCA897AB23BF0A5600A0C78E /* MeVC.swift in Sources */,
-				FCA897C723BF2B3C00A0C78E /* LoginVC+ET.swift in Sources */,
+				FCA897D423BF3D3600A0C78E /* PrivateJoinVC.swift in Sources */,
+				FCA897C723BF2B3C00A0C78E /* LoginVC+EXT.swift in Sources */,
 				FCA897A323BF0A3F00A0C78E /* ChatVC.swift in Sources */,
 				FCA8979B23BF0A0F00A0C78E /* MeetingVC.swift in Sources */,
+				FCA897D723BF406800A0C78E /* PrivateJoinVC+EXT.swift in Sources */,
+				FCA897CB23BF3B9D00A0C78E /* CloudVC+EXT.swift in Sources */,
+				FCA897C923BF370E00A0C78E /* PrivateVC+EXT.swift in Sources */,
 				FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */,
+				FCA897D023BF3D2700A0C78E /* PrivateLoginVC.swift in Sources */,
 				FCA8979523BF08E000A0C78E /* BaseTabBarVC.swift in Sources */,
 				FCA8979F23BF0A2200A0C78E /* JoinMeetingVC.swift in Sources */,
 				FCA897B923BF1F8A00A0C78E /* BaseVC+jump.swift in Sources */,

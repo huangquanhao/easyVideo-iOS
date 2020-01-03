@@ -1,5 +1,5 @@
 //
-//  LoginVC+ET.swift
+//  LoginVC+EXT.swift
 //  easyVideo-iOS
 //
 //  Created by quanhao huang on 2020/1/3.
