@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITabBarController {
+extension BaseTabBarVC {
     
     /// 加载当前VC
     func loadTabBarVC() -> Void {

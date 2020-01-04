@@ -7,15 +7,56 @@
 //
 
 import UIKit
+import WebKit
 
-class MeetingVC: BaseViewController {
+class MeetingVC: BaseViewController, WKScriptMessageHandler {
 
-    @IBOutlet weak var companyLb: UILabel!
+    var webKit:WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.PresentLoginVCPage(animated: true, presentStyle: .fullScreen)
+        self.createWKWebView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.hiddenNav()
+    }
+    
+    // MARK: WKScriptMessageHandler
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         
     }
     

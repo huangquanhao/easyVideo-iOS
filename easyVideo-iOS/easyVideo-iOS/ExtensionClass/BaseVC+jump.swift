@@ -9,6 +9,8 @@
 import UIKit
 
 extension BaseViewController {
+    // MARK: Presnet
+    
     /// 跳转LoginVC
     func PresentLoginVCPage(animated flag: Bool, presentStyle style: UIModalPresentationStyle) {
         let login = LoginVC()
@@ -35,5 +37,49 @@ extension BaseViewController {
         let privatejoinVC = PrivateJoinVC()
         privatejoinVC.modalPresentationStyle = style
         self.present(privatejoinVC, animated: flag, completion: nil)
+    }
+    
+    /// 跳转PrivateLoginVC
+    func PresentPrivateLoginVCPage(animated flag: Bool, presentStyle style: UIModalPresentationStyle) {
+        let privateloginVC = PrivateLoginVC()
+        privateloginVC.modalPresentationStyle = style
+        self.present(privateloginVC, animated: flag, completion: nil)
+    }
+    
+    /// 跳转AdvancedSettingVC
+    func PresentAdvancedSettingVCPage(animated flag: Bool, presentStyle style: UIModalPresentationStyle) {
+        let advancedSettingVC = AdvancedSettingVC()
+        advancedSettingVC.modalPresentationStyle = style
+        self.present(advancedSettingVC, animated: flag, completion: nil)
+    }
+    
+    /// 跳转LoginSettingVC
+    func PresentLoginSettingVCPage(animated flag: Bool, presentStyle style: UIModalPresentationStyle) {
+        let loginSettingVC = LoginSettingVC()
+        loginSettingVC.modalPresentationStyle = style
+        self.present(loginSettingVC, animated: flag, completion: nil)
+    }
+    
+    /// 跳转CloudLoginVC
+    func PresentCloudLoginVCPage(animated flag: Bool, presentStyle style: UIModalPresentationStyle) {
+        let cloudLoginVC = CloudLoginVC()
+        cloudLoginVC.modalPresentationStyle = style
+        self.present(cloudLoginVC, animated: flag, completion: nil)
+    }
+    
+    /// 跳着CloudJoinVC
+    func PresentCloudJoinVCCPage(animated flag: Bool, presentStyle style: UIModalPresentationStyle) {
+        let cloudJoinVC = CloudJoinVC()
+        cloudJoinVC.modalPresentationStyle = style
+        self.present(cloudJoinVC, animated: flag, completion: nil)
+    }
+    
+    /// dismissAllModalController
+    func disMissAllModelController(animated flag:Bool) {
+        if self.responds(to: #selector(getter: presentingViewController)) {
+            self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+        }else {
+            self.parent?.parent?.dismiss(animated: false, completion: nil)
+        }
     }
 }
