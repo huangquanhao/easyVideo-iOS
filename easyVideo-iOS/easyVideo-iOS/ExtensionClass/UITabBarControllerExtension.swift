@@ -33,8 +33,8 @@ extension BaseTabBarVC {
         item5.image = UIImage(named: "nav_me_nor")
         
         item1.title = "会议"
-        item2.title = "加入会议"
-        item3.title = "聊天"
+        item2.title = "聊天"
+        item3.title = "加入会议"
         item4.title = "通讯录"
         item5.title = "我"
         

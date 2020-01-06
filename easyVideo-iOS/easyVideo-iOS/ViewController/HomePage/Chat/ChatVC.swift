@@ -13,7 +13,15 @@ class ChatVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.customNavItem()
+        
+        self.navigationItem.title = "聊天asdasdadasdads"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        
+        self.showNav()
     }
 
 

@@ -9,6 +9,23 @@
 import Foundation
 import WebKit
 
+// MARK: BaseViewController
+extension BaseViewController {
+    func hiddenNav() {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    func showNav() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    func customNavItem() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+}
+
 // MARK: LoginVC+Ext
 extension LoginVC {
     func initContent() -> Void {
@@ -303,8 +320,15 @@ extension MeetingVC {
         webKit.load(myRequest)
     }
     
-    func hiddenNav() {
-        self.navigationController?.isNavigationBarHidden = true
-    }
+}
+
+// MARK: JoinMeeting+Ext
+
+// MARK: Chat+Ext
+
+// MARK: Contact+Ext
+
+// MARK: Me+Ext
+extension MeVC {
     
 }
