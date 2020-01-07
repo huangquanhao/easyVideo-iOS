@@ -1,9 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios,'9.0'
 target 'easyVideo-iOS' do
+inhibit_all_warnings!
 pod 'CocoaLumberjack'
 pod 'MJRefresh'
 pod 'SDWebImage'
 pod 'HQHUtils', '1.0.4'
 pod 'IQKeyboardManager'
+pod 'MLeaksFinder'
+pod 'FBRetainCycleDetector'
 end

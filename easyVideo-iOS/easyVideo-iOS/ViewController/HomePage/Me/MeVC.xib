@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeVC" customModule="easyVideo_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="accoutLb" destination="3dA-0e-oSE" id="3Ks-9e-1DZ"/>
+                <outlet property="disPlayNameLb" destination="if9-Ff-HA3" id="mRm-ar-O0B"/>
+                <outlet property="pushMeDetailBtn" destination="gBp-en-enu" id="1kR-uV-R1i"/>
+                <outlet property="userImg" destination="BJm-W2-ria" id="UHP-5b-NdL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -94,9 +98,13 @@
                         <constraint firstAttribute="trailing" secondItem="bt1-7d-1v5" secondAttribute="trailing" constant="10" id="wU5-ry-MaC"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0kY-Dp-KNi">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0kY-Dp-KNi">
                     <rect key="frame" x="0.0" y="134" width="414" height="728"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fVi-eo-1rY"/>
+                        <outlet property="delegate" destination="-1" id="ocZ-fH-lWh"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

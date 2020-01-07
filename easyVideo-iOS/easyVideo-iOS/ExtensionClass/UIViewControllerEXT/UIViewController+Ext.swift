@@ -20,9 +20,37 @@ extension BaseViewController {
     }
     
     func customNavItem() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        let navTitleFont = UIFont.init(name: "Helvetica-BoldOblique", size: 17)
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(formHexString: "0x313131") as Any, NSAttributedString.Key.font: navTitleFont as Any]
+        UIBarButtonItem.appearance().tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    }
+    
+    func createBackItem() {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 42, height: 40))
+        view.backgroundColor = UIColor.clear
+        let button = UIButton(type: .custom)
+        let image = UIImage.init(named: "btn_back")
+        let imageview = UIImageView.init(image: image)
+        imageview.frame = CGRect(x: 0, y: 10, width: 18, height: 18)
+        button.frame = CGRect(x: 0, y: 0, width: 42, height: 40)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
+        button.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        
+        view.addSubview(button)
+        view.addSubview(imageview)
+        
+        let backButtonItem = UIBarButtonItem(customView: view)
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        space.width = -17
+        self.navigationItem.leftBarButtonItems = [space, backButtonItem]
+    }
+    
+    @objc func goBack() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -330,5 +358,76 @@ extension MeetingVC {
 
 // MARK: Me+Ext
 extension MeVC {
+    func initContent() {
+        pushMeDetailBtn.addTarget(self, action: #selector(buttonMethod(sender:)), for: .touchUpInside)
+    }
     
+    func modifyPasswordAction() {
+        let alert = UIAlertController(title: "验证原密码", message: "为保障你的数据安全，修改密码前请填写原密码。", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "密码"
+        }
+        alert.addAction(UIAlertAction(title: "取消", style: .default, handler: { (action) in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action) in
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func buttonMethod(sender: UIButton) {
+        switch sender {
+        case pushMeDetailBtn:
+            self.pushUserInformationVC(animated: true)
+            break
+        default: break
+        }
+    }
+}
+
+// MARK: SettingVC+Ext
+extension SettingVC {
+    func initContent() {
+        self.title = "参数设置"
+    }
+}
+
+// MARK: InvitaVC+Ext
+extension InvitaVC {
+    func initContent() {
+        self.title = "邀请好友使用"
+        
+        shareToOneBtn.addTarget(self, action: #selector(buttonMethod(sender:)), for: .touchUpInside)
+        shareToGroupBtn.addTarget(self, action: #selector(buttonMethod(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func buttonMethod(sender: UIButton) {
+        switch sender {
+        case shareToOneBtn:
+            break
+        case shareToGroupBtn:
+            break
+        default: break
+        }
+    }
+}
+
+// MARK: AboutVC+Ext
+extension AboutVC {
+    func initContent() {
+        self.title = "关于"
+    }
+    
+    func checkVersion() {
+        
+    }
+}
+
+// MARK: UserInformationVC+Ext
+extension UserInformationVC {
+    func initContent() {
+        self.title = "个人信息"
+    }
 }

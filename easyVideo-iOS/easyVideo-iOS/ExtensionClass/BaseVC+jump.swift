@@ -82,4 +82,47 @@ extension BaseViewController {
             self.parent?.parent?.dismiss(animated: false, completion: nil)
         }
     }
+    
+    // MARK: Push, Pop
+    
+    /// Pop
+    func poptoPreviousPage(animated flag:Bool) {
+        self.navigationController?.popViewController(animated: flag)
+    }
+    
+    func poptoSpecifiedPage(viewController vc:UIViewController, animated flag:Bool) {
+        self.navigationController?.popToViewController(vc, animated: flag)
+    }
+    
+    func poptoRootPage(animated flag:Bool) {
+        self.navigationController?.popToRootViewController(animated: flag)
+    }
+    
+    /// 跳转SettingVC
+    func pushSettingVC(animated flag:Bool) {
+        let settingVC = SettingVC()
+        settingVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(settingVC, animated: flag)
+    }
+    
+    /// 跳转InvitaVC
+    func pushInvitaVC(animated flag:Bool) {
+        let invitaVC = InvitaVC()
+        invitaVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(invitaVC, animated: flag)
+    }
+    
+    /// 跳转AboutVC
+    func pushAboutVC(animated flag:Bool) {
+        let aboutVC = AboutVC()
+        aboutVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(aboutVC, animated: flag)
+    }
+    
+    /// 跳转 UserInformationVC
+    func pushUserInformationVC(animated flag:Bool) {
+        let userInformationVC = UserInformationVC()
+        userInformationVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(userInformationVC, animated: flag)
+    }
 }

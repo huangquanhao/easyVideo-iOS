@@ -15,7 +15,7 @@ class ChatVC: BaseViewController {
 
         self.customNavItem()
         
-        self.navigationItem.title = "聊天asdasdadasdads"
+        self.navigationItem.title = "聊天"
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -1,5 +1,5 @@
 //
-//  UITabBarControllerExtension.swift
+//  UITabBarController+Ext.swift
 //  easyVideo-iOS
 //
 //  Created by quanhao huang on 2020/1/3.
@@ -13,12 +13,17 @@ extension BaseTabBarVC {
     /// 加载当前VC
     func loadTabBarVC() -> Void {
         let meetingVC = MeetingVC()
+        let meetingNav = UINavigationController(rootViewController: meetingVC)
         let chatVC = ChatVC()
+        let chatNav = UINavigationController(rootViewController: chatVC)
         let joinMeetingVC = JoinMeetingVC()
+        let joinMeetingNav = UINavigationController(rootViewController: joinMeetingVC)
         let contactVC = ContactVC()
+        let contactNav = UINavigationController(rootViewController: contactVC)
         let meVC = MeVC()
+        let meNav = UINavigationController(rootViewController: meVC)
         
-        self.viewControllers = [meetingVC, chatVC, joinMeetingVC, contactVC, meVC]
+        self.viewControllers = [meetingNav, chatNav, joinMeetingNav, contactNav, meNav]
         
         let item1 = self.tabBar.items![0]
         let item2 = self.tabBar.items![1]
