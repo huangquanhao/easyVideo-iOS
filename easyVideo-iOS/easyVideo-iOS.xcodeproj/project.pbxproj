@@ -26,6 +26,8 @@
 		FC7FEADB23C4255100BE940F /* NormalWithImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC7FEAD923C4255100BE940F /* NormalWithImgCell.xib */; };
 		FC7FEADE23C42DB000BE940F /* LoginOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEADC23C42DB000BE940F /* LoginOutCell.swift */; };
 		FC7FEADF23C42DB000BE940F /* LoginOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC7FEADD23C42DB000BE940F /* LoginOutCell.xib */; };
+		FC7FEAE323C430FD00BE940F /* evsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7FEAE123C430F700BE940F /* evsdk.framework */; };
+		FC7FEAE423C430FD00BE940F /* evsdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC7FEAE123C430F700BE940F /* evsdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC93990523C037BC00C057B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */; };
 		FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */; };
 		FCA8977423BEF1B300A0C78E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA8977223BEF1B300A0C78E /* Main.storyboard */; };
@@ -69,6 +71,20 @@
 		FCBD28C623C3013D00E1069F /* NormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBD28C423C3013D00E1069F /* NormalCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC7FEAE523C430FD00BE940F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC7FEAE423C430FD00BE940F /* evsdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2E32B59F18AC78D59B4A3362 /* Pods-easyVideo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyVideo-iOS.release.xcconfig"; path = "Target Support Files/Pods-easyVideo-iOS/Pods-easyVideo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		7C66CB153E2204599DA6CCAB /* libPods-easyVideo-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-easyVideo-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +107,7 @@
 		FC7FEAD923C4255100BE940F /* NormalWithImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalWithImgCell.xib; sourceTree = "<group>"; };
 		FC7FEADC23C42DB000BE940F /* LoginOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOutCell.swift; sourceTree = "<group>"; };
 		FC7FEADD23C42DB000BE940F /* LoginOutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginOutCell.xib; sourceTree = "<group>"; };
+		FC7FEAE123C430F700BE940F /* evsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = evsdk.framework; sourceTree = "<group>"; };
 		FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FCA8976923BEF1B300A0C78E /* easyVideo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easyVideo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7FEAE323C430FD00BE940F /* evsdk.framework in Frameworks */,
 				83DB2C0A07F600A142527CC9 /* libPods-easyVideo-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +179,7 @@
 		E50B9E295A8ECCF4EFD918FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC7FEAE123C430F700BE940F /* evsdk.framework */,
 				7C66CB153E2204599DA6CCAB /* libPods-easyVideo-iOS.a */,
 			);
 			name = Frameworks;
@@ -432,6 +451,7 @@
 				FCA8976623BEF1B300A0C78E /* Frameworks */,
 				FCA8976723BEF1B300A0C78E /* Resources */,
 				807D399F85DD4B898742F344 /* [CP] Copy Pods Resources */,
+				FC7FEAE523C430FD00BE940F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -739,6 +759,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ969DV7E7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "easyVideo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -761,6 +785,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ969DV7E7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "easyVideo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
