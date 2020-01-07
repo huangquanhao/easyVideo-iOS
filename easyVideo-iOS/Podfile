@@ -5,7 +5,7 @@ inhibit_all_warnings!
 pod 'CocoaLumberjack'
 pod 'MJRefresh'
 pod 'SDWebImage'
-pod 'HQHUtils', '1.0.4'
+pod 'HQHUtils', '1.0.7'
 pod 'IQKeyboardManager'
 pod 'MLeaksFinder'
 pod 'FBRetainCycleDetector'

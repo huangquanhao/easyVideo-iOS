@@ -432,12 +432,7 @@ unsigned long long const kDDDefaultLogFilesDiskQuota   = 20 * 1024 * 1024; // 20
 
 //if you change newLogFileName , then  change isLogFile method also accordingly
 - (NSString *)newLogFileName {
-    NSString *appName = [self applicationName];
-
-    NSDateFormatter *dateFormatter = [self logFileDateFormatter];
-    NSString *formattedDate = [dateFormatter stringFromDate:[NSDate date]];
-
-    return [NSString stringWithFormat:@"%@ %@.log", appName, formattedDate];
+    return [NSString stringWithFormat:@"EVUILOG.log"];
 }
 
 - (NSString * __nullable)logFileHeader {

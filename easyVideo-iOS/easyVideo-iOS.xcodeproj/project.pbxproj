@@ -28,6 +28,8 @@
 		FC7FEADF23C42DB000BE940F /* LoginOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC7FEADD23C42DB000BE940F /* LoginOutCell.xib */; };
 		FC7FEAE323C430FD00BE940F /* evsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7FEAE123C430F700BE940F /* evsdk.framework */; };
 		FC7FEAE423C430FD00BE940F /* evsdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC7FEAE123C430F700BE940F /* evsdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC7FEAE823C452B600BE940F /* rootca.pem in Resources */ = {isa = PBXBuildFile; fileRef = FC7FEAE723C452B600BE940F /* rootca.pem */; };
+		FC7FEAEB23C4621D00BE940F /* DDLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAEA23C4621D00BE940F /* DDLogWrapper.m */; };
 		FC93990523C037BC00C057B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */; };
 		FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */; };
 		FCA8977423BEF1B300A0C78E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA8977223BEF1B300A0C78E /* Main.storyboard */; };
@@ -108,6 +110,9 @@
 		FC7FEADC23C42DB000BE940F /* LoginOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOutCell.swift; sourceTree = "<group>"; };
 		FC7FEADD23C42DB000BE940F /* LoginOutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginOutCell.xib; sourceTree = "<group>"; };
 		FC7FEAE123C430F700BE940F /* evsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = evsdk.framework; sourceTree = "<group>"; };
+		FC7FEAE723C452B600BE940F /* rootca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rootca.pem; sourceTree = "<group>"; };
+		FC7FEAE923C4621D00BE940F /* DDLogWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLogWrapper.h; sourceTree = "<group>"; };
+		FC7FEAEA23C4621D00BE940F /* DDLogWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLogWrapper.m; sourceTree = "<group>"; };
 		FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FCA8976923BEF1B300A0C78E /* easyVideo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easyVideo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +218,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		FC7FEAE623C452A700BE940F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FC7FEAE723C452B600BE940F /* rootca.pem */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		FCA8976023BEF1B300A0C78E = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +247,7 @@
 		FCA8976B23BEF1B300A0C78E /* easyVideo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FC7FEAE623C452A700BE940F /* Resource */,
 				FCBD28BE23C3009100E1069F /* Widget-View */,
 				FCA897CD23BF3C7E00A0C78E /* ViewController */,
 				FCA8979623BF090B00A0C78E /* BaseClass */,
@@ -435,6 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				FC7FEAE023C42DB500BE940F /* Cell */,
+				FC7FEAE923C4621D00BE940F /* DDLogWrapper.h */,
+				FC7FEAEA23C4621D00BE940F /* DDLogWrapper.m */,
 			);
 			path = "Widget-View";
 			sourceTree = "<group>";
@@ -519,6 +535,7 @@
 				FCA897B723BF1F0700A0C78E /* LoginVC.xib in Resources */,
 				FC0380F023C0630E001953CA /* CloudJoinVC.xib in Resources */,
 				FCBD28C223C3012400E1069F /* SwitchCell.xib in Resources */,
+				FC7FEAE823C452B600BE940F /* rootca.pem in Resources */,
 				FC0380E823C04779001953CA /* SettingCell.xib in Resources */,
 				FC7FEAD723C424EB00BE940F /* NormalWithLbCell.xib in Resources */,
 				FCBD28BD23C2F63800E1069F /* AboutVC.xib in Resources */,
@@ -586,6 +603,7 @@
 				FCA897D423BF3D3600A0C78E /* PrivateJoinVC.swift in Sources */,
 				FCBD28B823C2F62900E1069F /* InvitaVC.swift in Sources */,
 				FCA897A323BF0A3F00A0C78E /* ChatVC.swift in Sources */,
+				FC7FEAEB23C4621D00BE940F /* DDLogWrapper.m in Sources */,
 				FC93990523C037BC00C057B8 /* UIViewController+Ext.swift in Sources */,
 				FCA8979B23BF0A0F00A0C78E /* MeetingVC.swift in Sources */,
 				FC0380EB23C062FD001953CA /* CloudLoginVC.swift in Sources */,

@@ -27,6 +27,19 @@
     return [paths firstObject];
 }
 
++ (unsigned long long)getFileSize:(NSString *)url
+{
+    NSFileManager *file = [NSFileManager defaultManager];
+    NSDictionary *dict = [file attributesOfItemAtPath:url error:nil];
+    unsigned long long size = [dict fileSize];
+    return size;
+}
+
++ (NSString *)bundleFile:(NSString *)file;
+{
+    return [[NSBundle mainBundle] pathForResource:[file stringByDeletingPathExtension] ofType:[file pathExtension]];
+}
+
 + (BOOL)isExistWithFile:(NSString *)filePath
 {
     if (filePath && filePath.length > 0) {

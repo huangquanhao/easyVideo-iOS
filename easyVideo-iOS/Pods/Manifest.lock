@@ -3,7 +3,7 @@ PODS:
     - CocoaLumberjack/Core (= 3.6.0)
   - CocoaLumberjack/Core (3.6.0)
   - FBRetainCycleDetector (0.1.4)
-  - HQHUtils (1.0.4)
+  - HQHUtils (1.0.7)
   - IQKeyboardManager (6.5.4)
   - MJRefresh (3.3.1)
   - MLeaksFinder (1.0.0):
@@ -15,7 +15,7 @@ PODS:
 DEPENDENCIES:
   - CocoaLumberjack
   - FBRetainCycleDetector
-  - HQHUtils (= 1.0.4)
+  - HQHUtils (= 1.0.7)
   - IQKeyboardManager
   - MJRefresh
   - MLeaksFinder
@@ -34,12 +34,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  HQHUtils: a2d0f31186a6feabc9c308da58b02bc0fff160a7
+  HQHUtils: 5a2d9fb8ac76699318c5cfa2556f746484ffa407
   IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
 
-PODFILE CHECKSUM: d57c1c2e9500b870618abd36ce4ef42b416531e3
+PODFILE CHECKSUM: 80df53704d012af6b83a38b6f444524d6841d376
 
 COCOAPODS: 1.8.4

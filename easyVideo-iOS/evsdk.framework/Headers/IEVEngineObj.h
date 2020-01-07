@@ -324,7 +324,7 @@ __attribute__((visibility("default"))) @interface EVContactInfo : NSObject
 - (void)onMessageOverlay:(EVMessageOverlay *_Nonnull)msg;
 - (void)onWhiteBoardIndication:(EVWhiteBoardInfo * _Nonnull)msg;
 - (void)onParticipant:(int)number;
-- (void)onPeerImageUrl:(NSString*)imageUrl;
+- (void)onPeerImageUrl:(NSString *_Nonnull)imageUrl;
 @end
 
 //////////////////////////////
@@ -364,6 +364,6 @@ __attribute__((visibility("default"))) @interface EVContactInfo : NSObject
 //IM
 - (NSString * _Nonnull) getIMAddress;
 - (NSString * _Nonnull) getIMGroupID;
-- (EVContactInfo *)getContactInfo:(const char *_Nonnull)usrid timeout:(int)timeout_sec;
+- (EVContactInfo *_Nonnull)getContactInfo:(const char *_Nonnull)usrid timeout:(int)timeout_sec;
 - (void) setIMUserID:(const char *_Nonnull)im_usrid;
 @end

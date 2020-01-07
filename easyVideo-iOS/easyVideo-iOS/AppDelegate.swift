@@ -12,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    @objc let evengine = EVEngineObj()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.setIQKeyboardManager()
+        
+        self.setEVSDK()
+        
+        self.getPermissionInAdvance()
         
         return true
     }
