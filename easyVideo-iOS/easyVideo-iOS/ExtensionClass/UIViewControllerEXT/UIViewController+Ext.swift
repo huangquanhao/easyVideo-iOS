@@ -9,7 +9,7 @@
 import Foundation
 import WebKit
 
-func logsss(item: Any, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
+func log(item: Any, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
     print(file + ":\(line):" + function, item)
 }
 

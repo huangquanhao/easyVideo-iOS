@@ -113,6 +113,7 @@
 		FC7FEAE723C452B600BE940F /* rootca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rootca.pem; sourceTree = "<group>"; };
 		FC7FEAE923C4621D00BE940F /* DDLogWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLogWrapper.h; sourceTree = "<group>"; };
 		FC7FEAEA23C4621D00BE940F /* DDLogWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLogWrapper.m; sourceTree = "<group>"; };
+		FC7FEAEC23C4668F00BE940F /* easyVideo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = easyVideo.pch; sourceTree = "<group>"; };
 		FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FCA8976923BEF1B300A0C78E /* easyVideo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easyVideo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				FCA8979623BF090B00A0C78E /* BaseClass */,
 				FCA897AD23BF0E6100A0C78E /* ExtensionClass */,
 				FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */,
+				FC7FEAEC23C4668F00BE940F /* easyVideo.pch */,
 				FCA8977223BEF1B300A0C78E /* Main.storyboard */,
 				FCA8977523BEF1B600A0C78E /* Assets.xcassets */,
 				FCA8977723BEF1B600A0C78E /* LaunchScreen.storyboard */,
@@ -776,11 +778,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NZ969DV7E7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "easyVideo-iOS/easyVideo.pch";
 				INFOPLIST_FILE = "easyVideo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -792,6 +797,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -802,11 +808,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NZ969DV7E7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "easyVideo-iOS/easyVideo.pch";
 				INFOPLIST_FILE = "easyVideo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -817,6 +826,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "easyVideo-iOS/easyVideo-iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};

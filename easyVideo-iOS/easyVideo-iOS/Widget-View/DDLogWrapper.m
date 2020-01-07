@@ -7,15 +7,14 @@
 //
 
 #import "DDLogWrapper.h"
-#import "DDLog.h"
-#import "DDASLLogger.h"
-#import "DDTTYLogger.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <CocoaLumberjack/DDTTYLogger.h>
 
 // Definition of the current log level
-#ifdef DEBUG
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#if DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
 #else
-static const int ddLogLevel = LOG_LEVEL_ERROR;
+static const int ddLogLevel = DDLogLevelWarn;
 #endif
 @implementation DDLogWrapper
 

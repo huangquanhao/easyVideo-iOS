@@ -1,0 +1,14 @@
+//
+//  easyVideo.pch
+//  easyVideo-iOS
+//
+//  Created by quanhao huang on 2020/1/7.
+//  Copyright © 2020 quanhao huang. All rights reserved.
+//
+
+#ifndef easyVideo_pch
+#define easyVideo_pch
+
+#import <easyVideo_iOS-Swift.h>
+
+#endif /* easyVideo_pch */
