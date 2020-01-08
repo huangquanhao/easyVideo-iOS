@@ -45,5 +45,7 @@
 	<string>app use camera for video call</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>app use microphone for video/audio call</string>
+	<key>CLOUD_LOCATION_SERVER_ADDRESS</key>
+	<string>${CLOUD_LOCATION_SERVER_ADDRESS}</string>
 </dict>
 </plist>

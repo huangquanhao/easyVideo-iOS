@@ -15,8 +15,20 @@ public func log(item: Any, _ file: String = #file, _ line: Int = #line, _ functi
 
 // MARK: BaseViewController
 extension BaseViewController {
+    
+    /// Localized string
     func bundleStr(infoPlistStr str: String) -> String {
         return Bundle(for: type(of: self)).object(forInfoDictionaryKey: str) as! String
+    }
+    
+    /// info.Plist string
+    func getInfoString(infoString str: String) -> String {
+        let infoDictionary = Bundle.main.infoDictionary
+        if infoDictionary?[str] == nil {
+            return ""
+        }else{
+            return (infoDictionary![str] as? String)!
+        }
     }
     
     func hiddenNav() {
@@ -291,7 +303,7 @@ extension CloudLoginVC {
                 self.hud.show(animated: true)
                 self.hud.hide(animated: true, afterDelay: 3)
             }else {
-                
+                userLogin(withServer: getInfoString(infoString: ""), withPort: 0, withName: "", withPassword: "")
             }
             break
         default: break

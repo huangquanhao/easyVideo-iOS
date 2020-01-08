@@ -1,0 +1,24 @@
+//
+//  releasebuild.xcconfig
+//  easyVideo-iOS
+//
+//  Created by quanhao huang on 2020/1/8.
+//  Copyright © 2020 quanhao huang. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-easyVideo-iOS/Pods-easyVideo-iOS.release.xcconfig"
+
+WX_APP_ID = wx26944355a9662e43
+PRODUCT_BUNDLE_IDENTIFIER = com.hexmeet.hjt
+PRODUCT_NAME = HJT
+DEVELOPMENT_TEAM = W269R3L92R
+CODE_SIGN_IDENTITY = iPhone Distribution: Beijing Zhong Chuang Shi Xun Technology Co., Ltd. (W269R3L92R)
+PROVISIONING_PROFILE_SPECIFIER = HJT-Distribution-Provision
+CLOUD_LOCATION_SERVER_ADDRESS = cloudcenter.hexmeet.com
+CLOUD_TRIAL_URL = http:\/\/www.hjtcloud.com/try
+APPLE_ID =
+JPUSH_KEY = 846cfdd6171549d3a8750d92
+UNIVERSAL_LINK = https:\/\/swinfo.cninnovatel.com/hjt/

@@ -110,6 +110,8 @@
 		FC7E673323C578BA00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		FC7E673423C578BA00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FC7E673523C578BB00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		FC7E673B23C57CFC00B9CAFA /* releasebuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = releasebuild.xcconfig; sourceTree = "<group>"; };
+		FC7E673C23C57D0A00B9CAFA /* debugbuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debugbuild.xcconfig; sourceTree = "<group>"; };
 		FC7FEAD023C4242C00BE940F /* UserInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationVC.swift; sourceTree = "<group>"; };
 		FC7FEAD123C4242C00BE940F /* UserInformationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInformationVC.xib; sourceTree = "<group>"; };
 		FC7FEAD423C424EB00BE940F /* NormalWithLbCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalWithLbCell.swift; sourceTree = "<group>"; };
@@ -210,6 +212,15 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		FC7E673A23C57CDC00B9CAFA /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				FC7E673B23C57CFC00B9CAFA /* releasebuild.xcconfig */,
+				FC7E673C23C57D0A00B9CAFA /* debugbuild.xcconfig */,
+			);
+			path = xcconfig;
+			sourceTree = "<group>";
+		};
 		FC7FEACF23C423FF00BE940F /* UserInformationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +260,7 @@
 		FCA8976023BEF1B300A0C78E = {
 			isa = PBXGroup;
 			children = (
+				FC7E673A23C57CDC00B9CAFA /* xcconfig */,
 				FCA8976B23BEF1B300A0C78E /* easyVideo-iOS */,
 				FCA8976A23BEF1B300A0C78E /* Products */,
 				9F03ECA14341C1E99DC4FE6D /* Pods */,
@@ -812,7 +824,7 @@
 		};
 		FCA8977E23BEF1B600A0C78E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94BC8C6E623E3DA5586C7BD9 /* Pods-easyVideo-iOS.debug.xcconfig */;
+			baseConfigurationReference = FC7E673C23C57D0A00B9CAFA /* debugbuild.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -842,7 +854,7 @@
 		};
 		FCA8977F23BEF1B600A0C78E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E32B59F18AC78D59B4A3362 /* Pods-easyVideo-iOS.release.xcconfig */;
+			baseConfigurationReference = 94BC8C6E623E3DA5586C7BD9 /* Pods-easyVideo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
