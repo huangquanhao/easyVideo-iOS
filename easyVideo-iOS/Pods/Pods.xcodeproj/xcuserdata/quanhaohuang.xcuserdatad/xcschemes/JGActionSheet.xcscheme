@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3847153A6E5EEFB86565BA840768F429"
-               BuildableName = "libSDWebImage.a"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "F8639C70D482FE0267E09D411D53D565"
+               BuildableName = "libJGActionSheet.a"
+               BlueprintName = "JGActionSheet"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -17,6 +17,10 @@
 "alert.pwd.pop.title" = "Verify Original Password";
 "alert.pwd.pop.content" = "For password safety,input the original one before edit:";
 "alert.password" = "Please input password";
+"alert.note.loginout" = "Are you sure to log out?";
 
 "errorcode.1100" = "Invalid user.";
 "error.1112" = "Administrator is not allowed to arccess app. Please use user account.";
+
+"takePhoto" = "Take photo";
+"takeLibrary" = "Choose from Album";

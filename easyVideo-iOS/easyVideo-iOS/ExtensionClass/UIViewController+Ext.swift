@@ -8,6 +8,7 @@
 
 import Foundation
 import WebKit
+import MobileCoreServices
 
 public func log(item: Any, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
     print(file + ":\(line):" + function, item)
@@ -18,7 +19,7 @@ extension BaseViewController {
     
     /// Localized string
     func bundleStr(_ str: String) -> String {
-        return Bundle(for: type(of: self)).object(forInfoDictionaryKey: str) as! String
+        return Bundle(for: type(of: self)).object(forInfoDictionaryKey: str) as? String ?? ""
     }
     
     /// info.Plist string
@@ -383,13 +384,9 @@ extension MeetingVC {
         webKit.uiDelegate = self as? WKUIDelegate
         
         self.view.addSubview(webKit)
-        
-        let myURL = URL(string: loadMeetingVCWeb())
-        let myRequest = URLRequest(url: myURL!)
-        webKit.load(myRequest)
     }
     
-    func loadMeetingVCWeb() -> String{
+    func loadMeetingVCWeb() {
         let userInfo = PlistUtils.loadPlistFilewithFileName(userPlist)
         if userInfo[loginState] as? String == "YES" {
             var url = "\(userInfo[customizedH5UrlPrefix] ?? "")/mobile/#/conferences?token=\(userInfo[token] ?? "")"
@@ -403,10 +400,9 @@ extension MeetingVC {
             }
             
             DDLogWrapper.logInfo("[UI] meetingVC web url:\(url)")
-            return url
-        }else {
-            DDLogWrapper.logInfo("[UI] meetingVC web url error!!!")
-            return ""
+            
+            let myRequest = URLRequest(url: URL(string: url)!)
+            webKit.load(myRequest)
         }
     }
     
@@ -435,8 +431,8 @@ extension MeVC {
     
     func modifyPasswordAction() {
         let alert = UIAlertController(title: bundleStr("alert.pwd.pop.title"), message: bundleStr("alert.pwd.pop.content"), preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.placeholder = self.bundleStr("alert.password")
+        alert.addTextField {[weak self] (textField) in
+            textField.placeholder = self?.bundleStr("alert.password")
         }
         alert.addAction(UIAlertAction(title: bundleStr("alert.cancel"), style: .default, handler: { (action) in
             
@@ -508,8 +504,8 @@ extension UserInformationVC {
     
     func modifyDisPlayNameAction() {
         let alert = UIAlertController(title: bundleStr("alert.changeName"), message: "", preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.placeholder = self.bundleStr("alert.updateName.propt")
+        alert.addTextField {[weak self] (textField) in
+            textField.placeholder = self?.bundleStr("alert.updateName.propt")
             textField.text = PlistUtils.loadPlistFilewithFileName(userPlist)[displayName] as? String
         }
         alert.addAction(UIAlertAction(title: bundleStr("alert.cancel"), style: .default, handler: { (action) in
@@ -523,16 +519,67 @@ extension UserInformationVC {
     }
     
     func loginOutAction() {
-        let alert = UIAlertController(title: bundleStr("alert.changeName"), message: "", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: bundleStr("alert.cancel"), style: .default, handler: { (action) in
-            
-        }))
-        alert.addAction(UIAlertAction(title: bundleStr("alert.sure"), style: .default, handler: { (action) in
-            
-        }))
-        alert.addAction(UIAlertAction(title: bundleStr("alert.cancel"), style: .default, handler: { (action) in
-            
-        }))
-        self.present(alert, animated: true, completion: nil)
+        let section = JGActionSheetSection.init(title: "", message: bundleStr("alert.note.loginout"), buttonTitles: [bundleStr("alert.sure"), bundleStr("alert.cancel")], buttonStyle: .default)
+        
+        section?.setButtonStyle(.red, forButtonAt: 0)
+        
+        let sheet = JGActionSheet.init(sections: [section!])
+        sheet?.buttonPressedBlock = {[weak self] (actionSheet, indexPath) in
+            if indexPath?.row == 0 {
+                
+                let user = NSMutableDictionary.init(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
+                user.setValue("NO", forKey: loginState)
+                PlistUtils.savePlistFile(user as! [AnyHashable : Any], withFileName: userPlist)
+                
+                self?.whetherTheLogin()
+                self?.appDelegate.evengine.logout()
+            }
+            sheet?.dismiss(animated: true)
+        }
+        
+        sheet?.show(in: self.view, animated: true)
+    }
+    
+    func modifyHeadImg() {
+        let section = JGActionSheetSection.init(title: "", message: bundleStr("alert.note.loginout"), buttonTitles: [bundleStr("takePhoto"), bundleStr("takeLibrary"), bundleStr("alert.cancel")], buttonStyle: .default)
+        
+        section?.setButtonStyle(.red, forButtonAt: 2)
+        
+        let sheet = JGActionSheet.init(sections: [section!])
+        sheet?.buttonPressedBlock = {[weak self] (actionSheet, indexPath) in
+            if indexPath?.row == 0 {
+                if (self?.isCameraAvailable())! && (self?.doesCameraSupportTakingPhotos())! {
+                    
+                }
+            }else if indexPath?.row == 1 {
+                
+            }
+            sheet?.dismiss(animated: true)
+        }
+        
+        sheet?.show(in: self.view, animated: true)
+    }
+    
+    func isCameraAvailable() -> Bool {
+        return UIImagePickerController.isSourceTypeAvailable(.camera)
+    }
+    
+    func doesCameraSupportTakingPhotos() -> Bool {
+        return cameraSupportsMedia(String(kUTTypeImage), paramSourceType: .camera)
+    }
+    
+    func cameraSupportsMedia(_ paramMediaType: String, paramSourceType: UIImagePickerController.SourceType) ->Bool {
+        var result = false
+        if paramMediaType.count == 0 {
+            return result
+        }
+        let availableMediaTypes = UIImagePickerController.availableMediaTypes(for: paramSourceType)! as NSArray
+        availableMediaTypes.enumerateObjects { (obj, idx, stop) in
+            let mediaType = obj as! String
+            if mediaType ==  paramMediaType {
+                result = true
+            }
+        }
+        return result
     }
 }

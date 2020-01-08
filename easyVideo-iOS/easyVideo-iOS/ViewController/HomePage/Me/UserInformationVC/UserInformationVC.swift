@@ -56,11 +56,11 @@ class UserInformationVC: BaseViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            
+            modifyHeadImg()
         }else if indexPath.row == 1 {
             modifyDisPlayNameAction()
         }else if indexPath.row == 7 {
-            
+            loginOutAction()
         }
     }
 

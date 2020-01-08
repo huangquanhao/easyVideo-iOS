@@ -16,14 +16,16 @@ class MeetingVC: BaseViewController, WKScriptMessageHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.createWKWebView()
+        createWKWebView()
         
-        self.whetherTheLogin()
+        whetherTheLogin()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
-        self.hiddenNav()
+        hiddenNav()
+        
+        loadMeetingVCWeb()
     }
     
     // MARK: WKScriptMessageHandler
