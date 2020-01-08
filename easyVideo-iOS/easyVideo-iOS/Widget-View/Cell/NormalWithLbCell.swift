@@ -32,14 +32,19 @@ class NormalWithLbCell: UITableViewCell {
     
         if row == 2 {
             cell?.cellTitleLb.text = "账号"
+            cell?.cellDetailLb.text = PlistUtils.loadPlistFilewithFileName(userPlist)[username] as? String
         }else if row == 3 {
             cell?.cellTitleLb.text = "手机"
+            cell?.cellDetailLb.text = PlistUtils.loadPlistFilewithFileName(userPlist)[cellphone] as? String
         }else if row == 4 {
             cell?.cellTitleLb.text = "邮箱"
+            cell?.cellDetailLb.text = PlistUtils.loadPlistFilewithFileName(userPlist)[email] as? String
         }else if row == 5 {
             cell?.cellTitleLb.text = "公司"
+            cell?.cellDetailLb.text = PlistUtils.loadPlistFilewithFileName(userPlist)[org] as? String
         }else if row == 6 {
             cell?.cellTitleLb.text = "部门"
+            cell?.cellDetailLb.text = PlistUtils.loadPlistFilewithFileName(userPlist)[dept] as? String
         }
         
         return cell!

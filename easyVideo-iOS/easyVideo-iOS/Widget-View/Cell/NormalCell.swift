@@ -65,6 +65,7 @@ class NormalCell: UITableViewCell {
         cell?.line.isHidden = false
         cell?.cellTitle.text = "姓名"
         cell?.cellDetailLb.isHidden = false
+        cell?.cellDetailLb.text = PlistUtils.loadPlistFilewithFileName(userPlist)[displayName] as? String
         
         return cell!
     }

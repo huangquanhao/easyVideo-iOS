@@ -20,5 +20,16 @@ class CloudVC: BaseViewController {
         
         self.initContent()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.once(token: "CloudVC", block: {
+            let userInfo = PlistUtils.loadPlistFilewithFileName(userPlist)
+            if userInfo[loginMethod] != nil {
+                self.PresentCloudLoginVCPage(animated: true, presentStyle: .fullScreen)
+            }
+        })
+    }
 
 }

@@ -9,3 +9,4 @@
 #import <HQHUtils.h>
 #import "DDLogWrapper.h"
 #import "MBProgressHUD.h"
+#import "Manager.h"

@@ -17,6 +17,11 @@ class SettingVC: BaseViewController, UITableViewDelegate, UITableViewDataSource 
 
         self.createBackItem()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
 
     // MARK: UITableViewDelegate, UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {

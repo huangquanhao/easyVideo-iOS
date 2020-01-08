@@ -19,4 +19,19 @@ class LoginVC: BaseViewController {
         
         self.initContent()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.once(token: "LoginVC", block: {
+            let userInfo = PlistUtils.loadPlistFilewithFileName(userPlist)
+            if userInfo[loginMethod] != nil {
+                if userInfo[loginMethod] as? String == "cloud" {
+                    self.PresentCloudVCPage(animated: true, presentStyle: .fullScreen)
+                }else if userInfo[loginMethod] as? String == "private" {
+                    self.PresentPricatePage(animated: true, presentStyle: .fullScreen)
+                }
+            }
+        })
+    }
 }

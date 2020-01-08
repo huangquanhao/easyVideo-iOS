@@ -20,6 +20,8 @@
 		FC0380F023C0630E001953CA /* CloudJoinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0380EE23C0630E001953CA /* CloudJoinVC.xib */; };
 		FC7E672823C56AE300B9CAFA /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7E672723C56AE300B9CAFA /* Manager.m */; };
 		FC7E673023C5789600B9CAFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC7E673223C5789600B9CAFA /* InfoPlist.strings */; };
+		FC7E674723C5844B00B9CAFA /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E674623C5844B00B9CAFA /* String+Ext.swift */; };
+		FC7E674923C5B50F00B9CAFA /* DispatchQueue+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E674823C5B50F00B9CAFA /* DispatchQueue+Ext.swift */; };
 		FC7FEAD223C4242C00BE940F /* UserInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAD023C4242C00BE940F /* UserInformationVC.swift */; };
 		FC7FEAD323C4242C00BE940F /* UserInformationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC7FEAD123C4242C00BE940F /* UserInformationVC.xib */; };
 		FC7FEAD623C424EB00BE940F /* NormalWithLbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAD423C424EB00BE940F /* NormalWithLbCell.swift */; };
@@ -112,6 +114,8 @@
 		FC7E673523C578BB00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FC7E673B23C57CFC00B9CAFA /* releasebuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = releasebuild.xcconfig; sourceTree = "<group>"; };
 		FC7E673C23C57D0A00B9CAFA /* debugbuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debugbuild.xcconfig; sourceTree = "<group>"; };
+		FC7E674623C5844B00B9CAFA /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		FC7E674823C5B50F00B9CAFA /* DispatchQueue+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Ext.swift"; sourceTree = "<group>"; };
 		FC7FEAD023C4242C00BE940F /* UserInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationVC.swift; sourceTree = "<group>"; };
 		FC7FEAD123C4242C00BE940F /* UserInformationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInformationVC.xib; sourceTree = "<group>"; };
 		FC7FEAD423C424EB00BE940F /* NormalWithLbCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalWithLbCell.swift; sourceTree = "<group>"; };
@@ -366,6 +370,7 @@
 		FCA8978823BF05D300A0C78E /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				FC7FEACF23C423FF00BE940F /* UserInformationVC */,
 				FCBD28AE23C2F5A500E1069F /* SettingVC */,
 				FCBD28B023C2F5BA00E1069F /* InvitaVC */,
 				FCBD28AF23C2F5B700E1069F /* AboutVC */,
@@ -423,21 +428,15 @@
 		FCA897AD23BF0E6100A0C78E /* ExtensionClass */ = {
 			isa = PBXGroup;
 			children = (
-				FCA897CC23BF3BA100A0C78E /* UIViewControllerEXT */,
+				FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */,
 				FCA897B023BF0EDE00A0C78E /* UIView+Ext.swift */,
 				FCA897D823BF45F600A0C78E /* AppDelegate+Ext.swift */,
 				FCA897B223BF0F0000A0C78E /* UITabBarController+Ext.swift */,
 				FCA897B823BF1F8A00A0C78E /* BaseVC+jump.swift */,
+				FC7E674623C5844B00B9CAFA /* String+Ext.swift */,
+				FC7E674823C5B50F00B9CAFA /* DispatchQueue+Ext.swift */,
 			);
 			path = ExtensionClass;
-			sourceTree = "<group>";
-		};
-		FCA897CC23BF3BA100A0C78E /* UIViewControllerEXT */ = {
-			isa = PBXGroup;
-			children = (
-				FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */,
-			);
-			path = UIViewControllerEXT;
 			sourceTree = "<group>";
 		};
 		FCA897CD23BF3C7E00A0C78E /* ViewController */ = {
@@ -465,7 +464,6 @@
 			children = (
 				FCBD28BA23C2F63800E1069F /* AboutVC.swift */,
 				FCBD28BB23C2F63800E1069F /* AboutVC.xib */,
-				FC7FEACF23C423FF00BE940F /* UserInformationVC */,
 			);
 			path = AboutVC;
 			sourceTree = "<group>";
@@ -643,6 +641,7 @@
 				FCA897A323BF0A3F00A0C78E /* ChatVC.swift in Sources */,
 				FC7FEAEB23C4621D00BE940F /* DDLogWrapper.m in Sources */,
 				FC93990523C037BC00C057B8 /* UIViewController+Ext.swift in Sources */,
+				FC7E674923C5B50F00B9CAFA /* DispatchQueue+Ext.swift in Sources */,
 				FCA8979B23BF0A0F00A0C78E /* MeetingVC.swift in Sources */,
 				FC0380EB23C062FD001953CA /* CloudLoginVC.swift in Sources */,
 				FC7FEADA23C4255100BE940F /* NormalWithImgCell.swift in Sources */,
@@ -653,6 +652,7 @@
 				FCBD28C123C3012400E1069F /* SwitchCell.swift in Sources */,
 				FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */,
 				FCA897D023BF3D2700A0C78E /* PrivateLoginVC.swift in Sources */,
+				FC7E674723C5844B00B9CAFA /* String+Ext.swift in Sources */,
 				FCA8979523BF08E000A0C78E /* BaseTabBarVC.swift in Sources */,
 				FCA8979F23BF0A2200A0C78E /* JoinMeetingVC.swift in Sources */,
 				FCBD28C523C3013D00E1069F /* NormalCell.swift in Sources */,
@@ -854,7 +854,7 @@
 		};
 		FCA8977F23BEF1B600A0C78E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94BC8C6E623E3DA5586C7BD9 /* Pods-easyVideo-iOS.debug.xcconfig */;
+			baseConfigurationReference = 2E32B59F18AC78D59B4A3362 /* Pods-easyVideo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

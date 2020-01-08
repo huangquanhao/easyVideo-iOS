@@ -18,13 +18,14 @@ class MeVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.customNavItem()
+        customNavItem()
 
-        self.initContent()
+        initContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super .viewWillAppear(animated)
+        super.viewWillAppear(animated)
+        setDisplayContent()
     }
     
     // MARK: UITableViewDelegate, UITableViewDataSource

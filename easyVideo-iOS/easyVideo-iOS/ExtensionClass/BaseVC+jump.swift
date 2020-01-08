@@ -11,11 +11,7 @@ import UIKit
 extension BaseViewController {
     
     func whetherTheLogin() {
-        let user = PlistUtils.loadPlistFilewithFileName(userPlist)
-        let login = user[loginState] as? String
-        if login != "YES" {
-            self.PresentLoginVCPage(animated: true, presentStyle: .fullScreen)
-        }
+        self.PresentLoginVCPage(animated: true, presentStyle: .fullScreen)
     }
     
     // MARK: Presnet
@@ -136,7 +132,7 @@ extension BaseViewController {
     }
     
     // MARK: EVSDKMETHOD
-    func userLogin(withServer server: String, withPort port: Int, withName disPlayName: String, withPassword password :String) {
-        appDelegate.evengine.login(withLocation: server, port: 0, name: "huangqh", password: "123456")
+    func userLogin(withServer server: String, withPort port: Int, withAccout accout: String, withPassword password :String) {
+        appDelegate.evengine.login(withLocation: server, port: 0, name: accout, password: appDelegate.evengine .encryptPassword(password))
     }
 }

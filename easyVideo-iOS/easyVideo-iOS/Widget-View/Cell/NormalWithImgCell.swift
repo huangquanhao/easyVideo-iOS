@@ -32,6 +32,8 @@ class NormalWithImgCell: UITableViewCell {
         }
         
         cell?.cellTitleLb.text = "头像"
+        let headPath = "\(FileTools.getDocumentsFailePath())/header.jpg"
+        cell?.cellImg.sd_setImage(with: URL.init(fileURLWithPath: headPath), completed: nil)
         
         return cell!
     }

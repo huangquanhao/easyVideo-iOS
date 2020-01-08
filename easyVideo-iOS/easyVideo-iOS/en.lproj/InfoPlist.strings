@@ -6,3 +6,17 @@
   Copyright © 2020 quanhao huang. All rights reserved.
 */
 "login.note.writePassWord" = "Please enter your account number or password";
+"login.note.loginIn" = "Logging in...";
+
+"alert.cantconnert.server" = "Unable to connect to the server. Please check your network connection.";
+"alert.passworderror1" = "Incorrect password. Your account will be locked (for 5 minutes) after";
+"alert.passworderror2" = "more failed attempts.";
+"alert.passworderror3" = "Your account has been disabled. Please contact your administrator.";
+"alert.changeName" = "Rename";
+"alert.updateName.propt" = "Please input name";
+"alert.pwd.pop.title" = "Verify Original Password";
+"alert.pwd.pop.content" = "For password safety,input the original one before edit:";
+"alert.password" = "Please input password";
+
+"errorcode.1100" = "Invalid user.";
+"error.1112" = "Administrator is not allowed to arccess app. Please use user account.";

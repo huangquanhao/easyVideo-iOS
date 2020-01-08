@@ -31,13 +31,10 @@ static NSObject *g_lock = nil;
     return self;
 }
 
-- (void)_addDelegate:(id<ManagerDelegate>)delegate delegateQueue:(dispatch_queue_t)queue
+- (void)_addDelegate:(id<ManagerDelegate>)delegate
 {
     @synchronized(g_lock) {
-        if (!queue) {
-            queue = dispatch_get_main_queue();
-        }
-        [_delegates addDelegate:delegate delegateQueue:queue];
+        [_delegates addDelegate:delegate delegateQueue:dispatch_get_main_queue()];
     }
 }
 

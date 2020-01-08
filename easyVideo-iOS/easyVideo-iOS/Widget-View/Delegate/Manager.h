@@ -14,18 +14,21 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ManagerDelegate<NSObject>
 
 // MARK: EVSDK
+- (void)onLoginSucceedForMg:(EVUserInfo *_Nonnull)user;
 
 
 @end
 
 @interface Manager : NSObject
 {
-    GCDMulticastDelegate<ManagerDelegate> *_delegates;
+//    GCDMulticastDelegate<ManagerDelegate> *_delegates;
 }
+
+@property (nonatomic, strong) GCDMulticastDelegate<ManagerDelegate> *delegates;
 
 + (instancetype)sharedManager;
  
-- (void)_addDelegate:(id<ManagerDelegate>)delegate delegateQueue:(dispatch_queue_t)queue;
+- (void)_addDelegate:(id<ManagerDelegate>)delegate;
 - (void)removeDelegate:(id<ManagerDelegate>)delegate;
 
 @end

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CloudLoginVC: BaseViewController {
+class CloudLoginVC: BaseViewController, ManagerDelegate {
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var accoutTF: UITextField!
@@ -19,6 +19,22 @@ class CloudLoginVC: BaseViewController {
         super.viewDidLoad()
 
         self.initContent()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        Manager.shared().removeDelegate(self)
+    }
+    
+    func onLoginSucceed(forMg user: EVUserInfo) {
+        hud.hide(animated: true)
+        let userInfo = NSMutableDictionary(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
+        userInfo.setValue("YES", forKey: loginState)
+        userInfo.setValue("cloud", forKey: loginMethod)
+        userInfo.setValue(passwordTF.text!, forKey: password)
+        PlistUtils.savePlistFile(userInfo as! [AnyHashable : Any], withFileName: userPlist)
+        
+        self.disMissAllModelController(animated: true)
     }
 
 }
