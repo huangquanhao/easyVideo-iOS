@@ -8,8 +8,11 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
-
+class BaseViewController: UIViewController, EVEngineDelegate {
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var hud:MBProgressHUD!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,22 +31,21 @@ class BaseViewController: UIViewController {
     
     /// 设置属性
     func setRootViewAttribute() {
-        
+        appDelegate.evengine.setDelegate(self as EVEngineDelegate)
     }
     
     /// 设置背景颜色
     func setBackGroudColor(color:UIColor) {
         self.view.backgroundColor = color
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: EVEngineDelegate
+    func onLoginSucceed(_ user: EVUserInfo) {
+        
     }
-    */
+    
+    func onError(_ err: EVError) {
+        
+    }
 
 }

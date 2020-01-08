@@ -17,6 +17,8 @@ class MeetingVC: BaseViewController, WKScriptMessageHandler {
         super.viewDidLoad()
         
         self.createWKWebView()
+        
+        self.whetherTheLogin()
     }
     
     override func viewWillAppear(_ animated: Bool) {

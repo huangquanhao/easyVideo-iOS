@@ -18,6 +18,8 @@
 		FC0380EC23C062FD001953CA /* CloudLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0380EA23C062FD001953CA /* CloudLoginVC.xib */; };
 		FC0380EF23C0630E001953CA /* CloudJoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0380ED23C0630E001953CA /* CloudJoinVC.swift */; };
 		FC0380F023C0630E001953CA /* CloudJoinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0380EE23C0630E001953CA /* CloudJoinVC.xib */; };
+		FC7E672823C56AE300B9CAFA /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7E672723C56AE300B9CAFA /* Manager.m */; };
+		FC7E673023C5789600B9CAFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC7E673223C5789600B9CAFA /* InfoPlist.strings */; };
 		FC7FEAD223C4242C00BE940F /* UserInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAD023C4242C00BE940F /* UserInformationVC.swift */; };
 		FC7FEAD323C4242C00BE940F /* UserInformationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC7FEAD123C4242C00BE940F /* UserInformationVC.xib */; };
 		FC7FEAD623C424EB00BE940F /* NormalWithLbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAD423C424EB00BE940F /* NormalWithLbCell.swift */; };
@@ -30,6 +32,7 @@
 		FC7FEAE423C430FD00BE940F /* evsdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC7FEAE123C430F700BE940F /* evsdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC7FEAE823C452B600BE940F /* rootca.pem in Resources */ = {isa = PBXBuildFile; fileRef = FC7FEAE723C452B600BE940F /* rootca.pem */; };
 		FC7FEAEB23C4621D00BE940F /* DDLogWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAEA23C4621D00BE940F /* DDLogWrapper.m */; };
+		FC7FEAF323C479F800BE940F /* PlistAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAF223C479F800BE940F /* PlistAttribute.swift */; };
 		FC93990523C037BC00C057B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */; };
 		FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */; };
 		FCA8977423BEF1B300A0C78E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA8977223BEF1B300A0C78E /* Main.storyboard */; };
@@ -101,6 +104,12 @@
 		FC0380EA23C062FD001953CA /* CloudLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudLoginVC.xib; sourceTree = "<group>"; };
 		FC0380ED23C0630E001953CA /* CloudJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudJoinVC.swift; sourceTree = "<group>"; };
 		FC0380EE23C0630E001953CA /* CloudJoinVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudJoinVC.xib; sourceTree = "<group>"; };
+		FC7E672623C56AE300B9CAFA /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		FC7E672723C56AE300B9CAFA /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		FC7E673123C5789600B9CAFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FC7E673323C578BA00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FC7E673423C578BA00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FC7E673523C578BB00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FC7FEAD023C4242C00BE940F /* UserInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationVC.swift; sourceTree = "<group>"; };
 		FC7FEAD123C4242C00BE940F /* UserInformationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInformationVC.xib; sourceTree = "<group>"; };
 		FC7FEAD423C424EB00BE940F /* NormalWithLbCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalWithLbCell.swift; sourceTree = "<group>"; };
@@ -114,6 +123,7 @@
 		FC7FEAE923C4621D00BE940F /* DDLogWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDLogWrapper.h; sourceTree = "<group>"; };
 		FC7FEAEA23C4621D00BE940F /* DDLogWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDLogWrapper.m; sourceTree = "<group>"; };
 		FC7FEAEC23C4668F00BE940F /* easyVideo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = easyVideo.pch; sourceTree = "<group>"; };
+		FC7FEAF223C479F800BE940F /* PlistAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistAttribute.swift; sourceTree = "<group>"; };
 		FC93990423C037BC00C057B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FCA8976923BEF1B300A0C78E /* easyVideo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easyVideo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +201,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC7E672523C56A5900B9CAFA /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FC7E672623C56AE300B9CAFA /* Manager.h */,
+				FC7E672723C56AE300B9CAFA /* Manager.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		FC7FEACF23C423FF00BE940F /* UserInformationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +273,7 @@
 				FCA8979623BF090B00A0C78E /* BaseClass */,
 				FCA897AD23BF0E6100A0C78E /* ExtensionClass */,
 				FCA8976C23BEF1B300A0C78E /* AppDelegate.swift */,
+				FC7E673223C5789600B9CAFA /* InfoPlist.strings */,
 				FC7FEAEC23C4668F00BE940F /* easyVideo.pch */,
 				FCA8977223BEF1B300A0C78E /* Main.storyboard */,
 				FCA8977523BEF1B600A0C78E /* Assets.xcassets */,
@@ -450,9 +470,11 @@
 		FCBD28BE23C3009100E1069F /* Widget-View */ = {
 			isa = PBXGroup;
 			children = (
+				FC7E672523C56A5900B9CAFA /* Delegate */,
 				FC7FEAE023C42DB500BE940F /* Cell */,
 				FC7FEAE923C4621D00BE940F /* DDLogWrapper.h */,
 				FC7FEAEA23C4621D00BE940F /* DDLogWrapper.m */,
+				FC7FEAF223C479F800BE940F /* PlistAttribute.swift */,
 			);
 			path = "Widget-View";
 			sourceTree = "<group>";
@@ -503,6 +525,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = FCA8976023BEF1B300A0C78E;
 			productRefGroup = FCA8976A23BEF1B300A0C78E /* Products */;
@@ -532,6 +555,7 @@
 				FCA897C123BF1FE800A0C78E /* CloudVC.xib in Resources */,
 				FCBD28B923C2F62900E1069F /* InvitaVC.xib in Resources */,
 				FCA897AC23BF0A5600A0C78E /* MeVC.xib in Resources */,
+				FC7E673023C5789600B9CAFA /* InfoPlist.strings in Resources */,
 				FCA897D123BF3D2700A0C78E /* PrivateLoginVC.xib in Resources */,
 				FCA897A023BF0A2200A0C78E /* JoinMeetingVC.xib in Resources */,
 				FCA897B723BF1F0700A0C78E /* LoginVC.xib in Resources */,
@@ -610,7 +634,9 @@
 				FCA8979B23BF0A0F00A0C78E /* MeetingVC.swift in Sources */,
 				FC0380EB23C062FD001953CA /* CloudLoginVC.swift in Sources */,
 				FC7FEADA23C4255100BE940F /* NormalWithImgCell.swift in Sources */,
+				FC7FEAF323C479F800BE940F /* PlistAttribute.swift in Sources */,
 				FCA897D923BF45F600A0C78E /* AppDelegate+Ext.swift in Sources */,
+				FC7E672823C56AE300B9CAFA /* Manager.m in Sources */,
 				FC0380E323C044D0001953CA /* LoginSettingVC.swift in Sources */,
 				FCBD28C123C3012400E1069F /* SwitchCell.swift in Sources */,
 				FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */,
@@ -638,10 +664,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FC7E673223C5789600B9CAFA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC7E673123C5789600B9CAFA /* en */,
+				FC7E673523C578BB00B9CAFA /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		FCA8977223BEF1B300A0C78E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FCA8977323BEF1B300A0C78E /* Base */,
+				FC7E673323C578BA00B9CAFA /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -650,6 +686,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FCA8977823BEF1B600A0C78E /* Base */,
+				FC7E673423C578BA00B9CAFA /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -661,6 +698,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -721,6 +759,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

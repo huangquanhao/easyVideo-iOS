@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>app use camera for video call</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>app use microphone for video/audio call</string>
 </dict>
 </plist>

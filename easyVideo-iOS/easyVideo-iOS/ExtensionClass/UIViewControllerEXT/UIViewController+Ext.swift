@@ -9,12 +9,16 @@
 import Foundation
 import WebKit
 
-func log(item: Any, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
+public func log(item: Any, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
     print(file + ":\(line):" + function, item)
 }
 
 // MARK: BaseViewController
 extension BaseViewController {
+    func bundleStr(infoPlistStr str: String) -> String {
+        return Bundle(for: type(of: self)).object(forInfoDictionaryKey: str) as! String
+    }
+    
     func hiddenNav() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -281,7 +285,14 @@ extension CloudLoginVC {
             self.dismiss(animated: true, completion: nil)
             break
         case loginBtn:
-            self.disMissAllModelController(animated: true)
+            if accoutTF.text?.count == 0 || passwordTF.text?.count == 0 {
+                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+                self.hud.label.text = bundleStr(infoPlistStr: "login.note.writePassWord")
+                self.hud.show(animated: true)
+                self.hud.hide(animated: true, afterDelay: 3)
+            }else {
+                
+            }
             break
         default: break
         }

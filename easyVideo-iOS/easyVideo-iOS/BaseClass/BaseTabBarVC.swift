@@ -9,6 +9,8 @@
 import UIKit
 
 class BaseTabBarVC: UITabBarController {
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
