@@ -549,7 +549,20 @@ extension UserInformationVC {
         sheet?.buttonPressedBlock = {[weak self] (actionSheet, indexPath) in
             if indexPath?.row == 0 {
                 if (self?.isCameraAvailable())! && (self?.doesCameraSupportTakingPhotos())! {
+                    self?.imgPicker.sourceType = .camera
+                    if (self?.isFrontCameraAvailable())! {
+                        self?.imgPicker.cameraDevice = .front
+                    }
                     
+                    self?.imgPicker.mediaTypes = [(kUTTypeImage as String)]
+                    self?.imgPicker.delegate = self
+                    self?.imgPicker.allowsEditing = true
+                    self?.imgPicker.transitioningDelegate = self
+                    self?.modalPresentationStyle = .custom
+                    
+                    self?.present(self!.imgPicker, animated: true, completion: {
+                        DDLogWrapper.logInfo("[UI] user open camera")
+                    })
                 }
             }else if indexPath?.row == 1 {
                 
@@ -581,5 +594,9 @@ extension UserInformationVC {
             }
         }
         return result
+    }
+    
+    func isFrontCameraAvailable() -> Bool {
+        return UIImagePickerController.isCameraDeviceAvailable(.front)
     }
 }

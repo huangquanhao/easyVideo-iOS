@@ -8,9 +8,10 @@
 
 import UIKit
 
-class UserInformationVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class UserInformationVC: BaseViewController, UITableViewDelegate, UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var tab: UITableView!
+    let imgPicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
