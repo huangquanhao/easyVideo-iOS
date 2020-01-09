@@ -305,13 +305,19 @@ extension CloudLoginVC {
             if accoutTF.text?.count == 0 || passwordTF.text?.count == 0 {
                 self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 self.hud.detailsLabel.text = "login".localized
+                self.hud.customView = UIImageView(image: UIImage(named: "wrong_tip"))
+                self.hud.mode = .customView
                 self.hud.show(animated: true)
+                self.hud.removeFromSuperViewOnHide = true
                 self.hud.hide(animated: true, afterDelay: 3)
             }else {
                 DDLogWrapper.logInfo("user login server:\(getInfoString("CloudLoginServer")) port:0 accout:\(accoutTF.text!)")
                 userLogin(withServer: getInfoString("CloudLoginServer"), withPort: 0, withAccout: accoutTF.text!, withPassword: passwordTF.text!)
                 self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+                self.hud.customView = UIImageView(image: UIImage(named: "wrong_tip"))
+                self.hud.mode = .customView
                 self.hud.detailsLabel.text = "login.note.loginIn".localized
+                self.hud.removeFromSuperViewOnHide = true
                 self.hud.show(animated: true)
             }
             break
@@ -432,7 +438,21 @@ extension MeVC {
             
         }))
         alert.addAction(UIAlertAction(title: "alert.sure".localized, style: .default, handler: { (action) in
-            
+            let textField = alert.textFields![0]
+            if textField.text?.count != 0 {
+                let userInfo = PlistUtils.loadPlistFilewithFileName(userPlist)
+                if textField.text == userInfo[password] as? String {
+                    //密码正确
+                }else {
+                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+                    self.hud.customView = UIImageView(image: UIImage(named: "wrong_tip"))
+                    self.hud.detailsLabel.text = "alert.passwordError".localized
+                    self.hud.mode = .customView
+                    self.hud.show(animated: true)
+                    self.hud.removeFromSuperViewOnHide = true
+                    self.hud.hide(animated: true, afterDelay: 3)
+                }
+            }
         }))
         
         self.present(alert, animated: true, completion: nil)

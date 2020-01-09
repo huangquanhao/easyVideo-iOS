@@ -19,10 +19,13 @@
 "alert.passworderror3" = "Your account has been disabled. Please contact your administrator.";
 "alert.changeName" = "Rename";
 "alert.updateName.propt" = "Please input name";
+"alert.cancel" = "Cancel";
+"alert.sure" = "OK";
 "alert.pwd.pop.title" = "Verify Original Password";
 "alert.pwd.pop.content" = "For password safety,input the original one before edit:";
 "alert.password" = "Please input password";
 "alert.note.loginout" = "Are you sure to log out?";
+"alert.passwordError" = "Password mistake";
 
 "errorcode.1100" = "Invalid user.";
 "error.1112" = "Administrator is not allowed to arccess app. Please use user account.";

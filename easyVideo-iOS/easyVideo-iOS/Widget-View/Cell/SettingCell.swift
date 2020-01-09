@@ -48,16 +48,16 @@ class SettingCell: UITableViewCell {
         }
         if row == 0 {
             cell?.img.image = UIImage.init(named: "icon_setting")
-            cell?.cellTitle.text = "设置"
+            cell?.cellTitle.text = "me.set".localized
         }else if row == 1 {
             cell?.img.image = UIImage.init(named: "icon_password")
-            cell?.cellTitle.text = "密码"
+            cell?.cellTitle.text = "me.password".localized
         }else if row == 2 {
             cell?.img.image = UIImage.init(named: "icon_invite")
             cell?.cellTitle.text = "me.invite".localized
         }else if row == 3 {
             cell?.img.image = UIImage.init(named: "icon_about")
-            cell?.cellTitle.text = "关于"
+            cell?.cellTitle.text = "me.about".localized
         }
         return cell!
     }

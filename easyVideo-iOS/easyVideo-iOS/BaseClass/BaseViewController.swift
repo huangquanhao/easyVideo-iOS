@@ -75,6 +75,7 @@ class BaseViewController: UIViewController, EVEngineDelegate {
                 self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                 self.hud.detailsLabel.text = "alert.cantconnert.server".localized
                 self.hud.show(animated: true)
+                self.hud.removeFromSuperViewOnHide = true
                 self.hud.hide(animated: true, afterDelay: 3)
             }else if err.type == .server {
                 if err.code == 1101 {
@@ -83,30 +84,35 @@ class BaseViewController: UIViewController, EVEngineDelegate {
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                     self.hud.detailsLabel.text = alert
                     self.hud.show(animated: true)
+                    self.hud.removeFromSuperViewOnHide = true
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else if err.code == 1102 {
                     self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                     self.hud.detailsLabel.text = "alert.passworderror3".localized
                     self.hud.show(animated: true)
+                    self.hud.removeFromSuperViewOnHide = true
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else if err.code == 1100 {
                     self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                     self.hud.detailsLabel.text = "errorcode.1100".localized
                     self.hud.show(animated: true)
+                    self.hud.removeFromSuperViewOnHide = true
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else if err.code == 1112 {
                     self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                     self.hud.detailsLabel.text = "error.1112".localized
                     self.hud.show(animated: true)
+                    self.hud.removeFromSuperViewOnHide = true
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else {
                     self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                     self.hud.detailsLabel.text = "alert.cantconnert.server".localized
                     self.hud.show(animated: true)
+                    self.hud.removeFromSuperViewOnHide = true
                     self.hud.hide(animated: true, afterDelay: 3)
                 }
             }
