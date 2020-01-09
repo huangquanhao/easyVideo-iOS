@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = WechatOpenSDK;
+			productName = WechatOpenSDK;
 		};
 /* End PBXAggregateTarget section */
 
@@ -410,13 +411,13 @@
 		199E54E19B2D28D39ADA3CD17A3EFBA9 /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/Core/SDMemoryCache.m; sourceTree = "<group>"; };
 		19E0A419EE4970BCBC70717FD557C165 /* SDInternalMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDInternalMacros.m; path = SDWebImage/Private/SDInternalMacros.m; sourceTree = "<group>"; };
 		19EC079A9A9A2FE4FA9B6B4038112878 /* SDImageCachesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManager.m; path = SDWebImage/Core/SDImageCachesManager.m; sourceTree = "<group>"; };
-		1A07B9E8AA610348DE8A060D4512B0E9 /* libJGActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJGActionSheet.a; path = libJGActionSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A07B9E8AA610348DE8A060D4512B0E9 /* libJGActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJGActionSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9DE8EE3415E7F8045AC65909EB723D /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/Core/SDImageLoadersManager.h; sourceTree = "<group>"; };
 		1B34821FB561AD40A214405D7A301094 /* CodingTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CodingTools.h; path = HQHUtils/HQHUtils/Tools/CodingTools.h; sourceTree = "<group>"; };
 		1BBB0F2FB60B04F0BBF6C79C12652C02 /* MJRefreshConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConst.h; path = MJRefresh/MJRefreshConst.h; sourceTree = "<group>"; };
 		1BDFF92B618DA2E1EF2FF53460B13C54 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshGifHeader.h; path = MJRefresh/Custom/Header/MJRefreshGifHeader.h; sourceTree = "<group>"; };
 		1C8E32608E4D0A362F5B04ADC7683814 /* NSString+Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Helper.h"; path = "HQHUtils/HQHUtils/Category/NSString+Helper.h"; sourceTree = "<group>"; };
-		1CC81F99769E72B11F0C8572AB50F4F8 /* libHQHUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHQHUtils.a; path = libHQHUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CC81F99769E72B11F0C8572AB50F4F8 /* libHQHUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHQHUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF8D56CBF1312CECB34A8CA591915F9 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Sources/CocoaLumberjack/DDLog.m; sourceTree = "<group>"; };
 		1F1DB8AB2FCC766F5B020B630D369C06 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJRefresh.m"; path = "MJRefresh/UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		1F72FCA5A115A703349D9065DB662F55 /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
@@ -437,7 +438,7 @@
 		2D6E9C3672FD1E622EBB65B6D79B75FF /* SDInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDInternalMacros.h; path = SDWebImage/Private/SDInternalMacros.h; sourceTree = "<group>"; };
 		2D86E1938B7F5AC2B67EBA11E2BE0D14 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/Core/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
 		2F3F410643AE7993BB3920C1DFF19B7A /* SDWebImageOptionsProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOptionsProcessor.h; path = SDWebImage/Core/SDWebImageOptionsProcessor.h; sourceTree = "<group>"; };
-		304601385CAC519C8059DDA514C920F7 /* libPods-easyVideo-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-easyVideo-iOS.a"; path = "libPods-easyVideo-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		304601385CAC519C8059DDA514C920F7 /* libPods-easyVideo-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-easyVideo-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B1FFA3AB121690327F82BD09D958BE /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		31B79BCAB9CEA2192628D9DAF6E6C174 /* Pods-easyVideo-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-easyVideo-iOS-resources.sh"; sourceTree = "<group>"; };
 		32F30A00EA7F5D8664BBF0C1F4A82556 /* MJRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.xcconfig; sourceTree = "<group>"; };
@@ -501,7 +502,7 @@
 		64D0046F89469330B22482D4C37EF587 /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardReturnKeyHandler.h; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
 		65001BD7DE46915B0B60499AF3D341A3 /* SDImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOCoder.h; path = SDWebImage/Core/SDImageIOCoder.h; sourceTree = "<group>"; };
 		654E4184F7FCAE3612E3C74CD2C83E64 /* DDLoggerNames.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLoggerNames.m; path = Sources/CocoaLumberjack/DDLoggerNames.m; sourceTree = "<group>"; };
-		66904951C7D2B7A8004EB81BA82466D4 /* libGCDMulticastDelegate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGCDMulticastDelegate.a; path = libGCDMulticastDelegate.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66904951C7D2B7A8004EB81BA82466D4 /* libGCDMulticastDelegate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCDMulticastDelegate.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B44256D964E3C76FE893A2FB8217AD /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
 		67A5AF03CF6F52469C86D1B1376B6517 /* UIImage+Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Helper.h"; path = "HQHUtils/HQHUtils/Category/UIImage+Helper.h"; sourceTree = "<group>"; };
 		67B74FC6A3C6DA5C9F45E9958A311AF8 /* NSBezierPath+RoundedCorners.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+RoundedCorners.m"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.m"; sourceTree = "<group>"; };
@@ -543,7 +544,7 @@
 		886E8AE9194977E9B19FAE867A0F22E8 /* SDWebImageDownloaderConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderConfig.m; path = SDWebImage/Core/SDWebImageDownloaderConfig.m; sourceTree = "<group>"; };
 		88793D42955533AFCA08745E2E6741D1 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackFooter.h; path = MJRefresh/Base/MJRefreshBackFooter.h; sourceTree = "<group>"; };
 		8AD5FD8E6C816BB6F654DBE2494B502C /* UIView+Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Helper.m"; path = "HQHUtils/HQHUtils/Category/UIView+Helper.m"; sourceTree = "<group>"; };
-		8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE484E963E7BBD9AA197A6A50BE7521 /* SDImageHEICCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageHEICCoder.m; path = SDWebImage/Core/SDImageHEICCoder.m; sourceTree = "<group>"; };
 		8C72F4A85B3BE75F0C06999B0DA398AA /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/Core/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
 		8C9AD813F276646982ACF57BB5D458EA /* SDWebImageIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageIndicator.m; path = SDWebImage/Core/SDWebImageIndicator.m; sourceTree = "<group>"; };
@@ -567,13 +568,13 @@
 		9493B4DCF558217561ED885B4E601D0F /* SDAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImage.m; path = SDWebImage/Core/SDAnimatedImage.m; sourceTree = "<group>"; };
 		9569822E5BB0F8D0D12804FF0BE780A4 /* MJRefreshConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConfig.h; path = MJRefresh/MJRefreshConfig.h; sourceTree = "<group>"; };
 		95C4338ED94F42578E6911B085A0F36E /* CLIColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLIColor.h; path = Sources/CocoaLumberjack/include/CLIColor.h; sourceTree = "<group>"; };
-		98527D7196957AAB07B79E2E2AFDE23E /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIQKeyboardManager.a; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		98527D7196957AAB07B79E2E2AFDE23E /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B8645FF0FD7301A70C7BB5CDB1FF40 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+Hierarchy.h"; path = "IQKeyboardManager/Categories/IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
 		9A1A910796CA76869240642A5C7AFE95 /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
 		9B6BE3CDA36A33A258DEE12EFBBEFBF2 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/Core/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		9CC4873DAC7D3371E88DD29FF4DDF66A /* GCDMulticastDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GCDMulticastDelegate.m; sourceTree = "<group>"; };
 		9D13BAEAE94D030D3C2D06DBF80FB00D /* SDWebImageError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageError.h; path = SDWebImage/Core/SDWebImageError.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DD6B0CD911FEDA001A2BC5D33346AAB /* DeviceTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DeviceTools.m; path = HQHUtils/HQHUtils/Tools/DeviceTools.m; sourceTree = "<group>"; };
 		9DEFD31F9CC3017FF792C0F49DAD172E /* SDWebImageIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageIndicator.h; path = SDWebImage/Core/SDWebImageIndicator.h; sourceTree = "<group>"; };
 		9E33495ADD8D687C8006ECF3FC552CCE /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUITextFieldView+Additions.m"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
@@ -587,7 +588,7 @@
 		A35BD172474B6B2D49EF00D1A0494474 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshGifHeader.m; path = MJRefresh/Custom/Header/MJRefreshGifHeader.m; sourceTree = "<group>"; };
 		A4A3E5FCA0C2AC81897F84A9DE15172C /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/Core/NSButton+WebCache.m"; sourceTree = "<group>"; };
 		A4CFF77E132E56F25B3A214A06726677 /* SDWebImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImage.h; path = WebImage/SDWebImage.h; sourceTree = "<group>"; };
-		A5B2838E4866923F3DA717B058EBFF5D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = IQKeyboardManager.bundle; path = "IQKeyboardManager-IQKeyboardManager.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B2838E4866923F3DA717B058EBFF5D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IQKeyboardManager.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A2D381714D6A3CF6C3FB96D3154C8D /* SDImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFrame.h; path = SDWebImage/Core/SDImageFrame.h; sourceTree = "<group>"; };
 		A6F7EA20B4101F0AC7E77AB97BCAE47A /* IQKeyboardManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManager-dummy.m"; sourceTree = "<group>"; };
 		A8A00EFF702962BDC2C5AC96E86ACC6F /* MJRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshComponent.h; path = MJRefresh/Base/MJRefreshComponent.h; sourceTree = "<group>"; };
@@ -602,7 +603,7 @@
 		AEC23920D4C309FADE183B452BCB40D0 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		AFA49065E3FD266831601E0BB897378A /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+IQKeyboardToolbar.m"; path = "IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		B0500F7FA12F3014FD9E848CC8498EEC /* IQToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQToolbar.h; path = IQKeyboardManager/IQToolbar/IQToolbar.h; sourceTree = "<group>"; };
-		B0B214D775196BA7CA8E17E53048A493 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDWebImage.a; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B214D775196BA7CA8E17E53048A493 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A307B4BC28C09066F68DB1D7D1D30F /* UIImage+ExtendedCacheData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ExtendedCacheData.m"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.m"; sourceTree = "<group>"; };
 		B3973B2BA473A8F6BC87CF3617B2393C /* DDFileLogger+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Internal.h"; path = "Sources/CocoaLumberjack/DDFileLogger+Internal.h"; sourceTree = "<group>"; };
 		B4BB1A31610EFE2121D70F44041CF469 /* HQHUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HQHUtils-prefix.pch"; sourceTree = "<group>"; };
@@ -616,7 +617,7 @@
 		BA000E6691829B45108F86745C87B80B /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAsyncBlockOperation.m; path = SDWebImage/Private/SDAsyncBlockOperation.m; sourceTree = "<group>"; };
 		BBBC72475DE9ED45E7E0426D549729B8 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUITextFieldView+Additions.h"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
 		C101DD0514B354F2E5C2D7A446D94220 /* SDmetamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDmetamacros.h; path = SDWebImage/Private/SDmetamacros.h; sourceTree = "<group>"; };
-		C261436D14052AE3C35F240BCD155CAC /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCocoaLumberjack.a; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C261436D14052AE3C35F240BCD155CAC /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B90C860D163187E04B476DE74B5820 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		C2E3A89F10F0E23723C9DFBDF5C319AE /* SDImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoderHelper.m; path = SDWebImage/Core/SDImageCoderHelper.m; sourceTree = "<group>"; };
 		C2F45D362C8AEC44FF59D8EEB4836FFA /* SDImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCodersManager.h; path = SDWebImage/Core/SDImageCodersManager.h; sourceTree = "<group>"; };
@@ -652,7 +653,7 @@
 		E3D808174EB4F0F4C2C879BB8AE4EFB0 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
 		E4210D2FC3EBFA65AAA6D70FB1747934 /* MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = MJRefresh/MJRefresh.h; sourceTree = "<group>"; };
 		E43EC9000789C164488DF7E5FA8E5E80 /* FileTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FileTools.h; path = HQHUtils/HQHUtils/Tools/FileTools.h; sourceTree = "<group>"; };
-		E49D6D248DD1CEE584E6776B9164A1B2 /* libMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMJRefresh.a; path = libMJRefresh.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49D6D248DD1CEE584E6776B9164A1B2 /* libMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMJRefresh.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57B564CF5EEAF222DABF69FCF80C728 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Sources/CocoaLumberjack/include/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		E5C547970F1D1AA6D27C770B9BB9E747 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		E5ECDFE3C8F029650729A0F25DE11254 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Sources/CocoaLumberjack/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
@@ -1009,7 +1010,6 @@
 				B52B4E0E5F5EF6504ABD18C3165EC7F1 /* JGActionSheet.m */,
 				799A51B7A4096EC47BCBBB0E24A363EC /* Support Files */,
 			);
-			name = JGActionSheet;
 			path = JGActionSheet;
 			sourceTree = "<group>";
 		};
@@ -1056,7 +1056,6 @@
 				3E8920C0BC44F1BE8995E29503E0A9E3 /* Resources */,
 				74EDBE926402C184C660A20F1FAEA6E4 /* Support Files */,
 			);
-			name = IQKeyboardManager;
 			path = IQKeyboardManager;
 			sourceTree = "<group>";
 		};
@@ -1067,7 +1066,6 @@
 				9CC4873DAC7D3371E88DD29FF4DDF66A /* GCDMulticastDelegate.m */,
 				3B9855D86F17C022FC42774A156A8E3D /* Support Files */,
 			);
-			name = GCDMulticastDelegate;
 			path = GCDMulticastDelegate;
 			sourceTree = "<group>";
 		};
@@ -1141,7 +1139,6 @@
 				005535ADF91FF1BB21108533737B9121 /* Resources */,
 				E0193F2B076133D36386762A3D5C04B1 /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -1174,7 +1171,6 @@
 				DA2CB47C164639CDEAD57EA6AEEB1AE6 /* MBProgressHUD.m */,
 				BE45A110628543177C577C4837DAF911 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1184,7 +1180,6 @@
 				3ABCA0EA0EDE887CDD14C942FC187313 /* Core */,
 				840BD058C31A1B89380C3C032416668A /* Support Files */,
 			);
-			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -1244,7 +1239,6 @@
 				8AD5FD8E6C816BB6F654DBE2494B502C /* UIView+Helper.m */,
 				834658FBE0E8B22326D51AB3BC42F1D3 /* Support Files */,
 			);
-			name = HQHUtils;
 			path = HQHUtils;
 			sourceTree = "<group>";
 		};
@@ -1270,7 +1264,6 @@
 				092C8DF7C39EC62219954ECCAC2F26F0 /* Core */,
 				C453A535E5DBB44DD11699E0B26DC5C3 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -1329,7 +1322,6 @@
 				1FA98A9556D3559356E192863A458B2A /* Frameworks */,
 				508BDCCA7AB55E713102874B25368AE4 /* Support Files */,
 			);
-			name = WechatOpenSDK;
 			path = WechatOpenSDK;
 			sourceTree = "<group>";
 		};
@@ -1747,7 +1739,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -2370,7 +2362,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/JGActionSheet/JGActionSheet-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2600,7 +2592,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/JGActionSheet/JGActionSheet-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";

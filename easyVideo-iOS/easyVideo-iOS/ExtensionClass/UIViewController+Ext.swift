@@ -557,11 +557,7 @@ extension AboutVC {
 // MARK: UserInformationVC+Ext
 extension UserInformationVC {
     func initContent() {
-        self.title = "个人信息"
-    }
-    
-    func setDisplayContent() {
-        
+        self.title = "title.infomation".localized
     }
     
     func modifyDisPlayNameAction() {
@@ -573,8 +569,18 @@ extension UserInformationVC {
         alert.addAction(UIAlertAction(title: "alert.cancel".localized, style: .default, handler: { (action) in
             
         }))
-        alert.addAction(UIAlertAction(title: "alert.sure".localized, style: .default, handler: { (action) in
-            
+        alert.addAction(UIAlertAction(title: "alert.sure".localized, style: .default, handler: {[weak self] (action) in
+            let textField = alert.textFields![0]
+            if textField.text?.count != 0 {
+                self?.appDelegate.evengine.changeDisplayName(textField.text!)
+                
+                let cell = self?.tab.cellForRow(at: IndexPath.init(row: 1, section: 0)) as! NormalCell
+                cell.cellDetailLb.text = textField.text!
+                
+                let userInfo = NSMutableDictionary.init(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
+                userInfo.setValue(textField.text!, forKey: displayName)
+                PlistUtils.savePlistFile(userInfo as! [AnyHashable : Any], withFileName: userPlist)
+            }
         }))
         
         self.present(alert, animated: true, completion: nil)
