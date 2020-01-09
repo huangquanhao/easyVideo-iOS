@@ -11,6 +11,7 @@ PODS:
   - SDWebImage (5.4.1):
     - SDWebImage/Core (= 5.4.1)
   - SDWebImage/Core (5.4.1)
+  - WechatOpenSDK (1.8.6)
 
 DEPENDENCIES:
   - CocoaLumberjack
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJRefresh
   - SDWebImage
+  - WechatOpenSDK
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -32,6 +34,7 @@ SPEC REPOS:
     - MBProgressHUD
     - MJRefresh
     - SDWebImage
+    - WechatOpenSDK
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
@@ -42,7 +45,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
+  WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
 
-PODFILE CHECKSUM: e27f9e91df97042b461b8775fc0c37abb90373e7
+PODFILE CHECKSUM: 48eafc746bd77472ac4a9add32e82c03d2f4e0ad
 
 COCOAPODS: 1.8.4

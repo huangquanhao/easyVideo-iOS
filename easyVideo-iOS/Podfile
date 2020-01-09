@@ -10,4 +10,5 @@ pod 'IQKeyboardManager'
 pod 'GCDMulticastDelegate'
 pod 'MBProgressHUD'
 pod 'JGActionSheet'
+pod 'WechatOpenSDK'
 end
