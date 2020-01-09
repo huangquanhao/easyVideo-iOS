@@ -12,4 +12,8 @@ extension String {
     func getiPhoneName() -> String {
         return ""
     }
+    
+    var localized: String {
+        return NSLocalizedString(self, comment: self)
+    }
 }

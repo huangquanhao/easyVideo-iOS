@@ -1,12 +1,17 @@
 /* 
-  InfoPlist.strings
+  Localizable.strings
   easyVideo-iOS
 
-  Created by quanhao huang on 2020/1/8.
+  Created by quanhao huang on 2020/1/9.
   Copyright © 2020 quanhao huang. All rights reserved.
 */
 "login.note.writePassWord" = "Please enter your account number or password";
 "login.note.loginIn" = "Logging in...";
+
+"me.set" = "Settings";
+"me.password" = "Password";
+"me.invite" = "Invite Friends";
+"me.about" = "About";
 
 "alert.cantconnert.server" = "Unable to connect to the server. Please check your network connection.";
 "alert.passworderror1" = "Incorrect password. Your account will be locked (for 5 minutes) after";

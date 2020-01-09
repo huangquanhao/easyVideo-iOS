@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController, EVEngineDelegate {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var hud:MBProgressHUD!
+    var hud:MBProgressHUD! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,35 +71,41 @@ class BaseViewController: UIViewController, EVEngineDelegate {
         DispatchQueue.main.async {
             DDLogWrapper.logInfo("[UI] onError msg:\(err.msg) code:\(err.code)")
             if err.type == .sdk || err.type == .locate {
+                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
-                self.hud.detailsLabel.text = self.bundleStr("alert.cantconnert.server")
+                self.hud.detailsLabel.text = "alert.cantconnert.server".localized
                 self.hud.show(animated: true)
                 self.hud.hide(animated: true, afterDelay: 3)
             }else if err.type == .server {
                 if err.code == 1101 {
-                    let alert = "\(self.bundleStr("alert.passworderror1"))\(String((err.args?[0])!))\(self.bundleStr("alert.passworderror2"))"
+                    let alert = "\("alert.passworderror1".localized)\(String((err.args?[0])!))\("alert.passworderror2".localized)"
+                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                     self.hud.detailsLabel.text = alert
                     self.hud.show(animated: true)
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else if err.code == 1102 {
+                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
-                    self.hud.detailsLabel.text = self.bundleStr("alert.passworderror3")
+                    self.hud.detailsLabel.text = "alert.passworderror3".localized
                     self.hud.show(animated: true)
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else if err.code == 1100 {
+                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
-                    self.hud.detailsLabel.text = self.bundleStr("errorcode.1100")
+                    self.hud.detailsLabel.text = "errorcode.1100".localized
                     self.hud.show(animated: true)
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else if err.code == 1112 {
+                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
-                    self.hud.detailsLabel.text = self.bundleStr("error.1112")
+                    self.hud.detailsLabel.text = "error.1112".localized
                     self.hud.show(animated: true)
                     self.hud.hide(animated: true, afterDelay: 3)
                 }else {
+                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
-                    self.hud.detailsLabel.text = self.bundleStr("alert.cantconnert.server")
+                    self.hud.detailsLabel.text = "alert.cantconnert.server".localized
                     self.hud.show(animated: true)
                     self.hud.hide(animated: true, afterDelay: 3)
                 }

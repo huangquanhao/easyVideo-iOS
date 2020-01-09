@@ -16,12 +16,6 @@ public func log(item: Any, _ file: String = #file, _ line: Int = #line, _ functi
 
 // MARK: BaseViewController
 extension BaseViewController {
-    
-    /// Localized string
-    func bundleStr(_ str: String) -> String {
-        return Bundle(for: type(of: self)).object(forInfoDictionaryKey: str) as? String ?? ""
-    }
-    
     /// info.Plist string
     func getInfoString(_ str: String) -> String {
         let infoDictionary = Bundle.main.infoDictionary
@@ -310,14 +304,14 @@ extension CloudLoginVC {
         case loginBtn:
             if accoutTF.text?.count == 0 || passwordTF.text?.count == 0 {
                 self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-                self.hud.detailsLabel.text = bundleStr("login.note.writePassWord")
+                self.hud.detailsLabel.text = "login".localized
                 self.hud.show(animated: true)
                 self.hud.hide(animated: true, afterDelay: 3)
             }else {
                 DDLogWrapper.logInfo("user login server:\(getInfoString("CloudLoginServer")) port:0 accout:\(accoutTF.text!)")
                 userLogin(withServer: getInfoString("CloudLoginServer"), withPort: 0, withAccout: accoutTF.text!, withPassword: passwordTF.text!)
                 self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-                self.hud.detailsLabel.text = bundleStr("login.note.loginIn")
+                self.hud.detailsLabel.text = "login.note.loginIn".localized
                 self.hud.show(animated: true)
             }
             break
@@ -430,14 +424,14 @@ extension MeVC {
     }
     
     func modifyPasswordAction() {
-        let alert = UIAlertController(title: bundleStr("alert.pwd.pop.title"), message: bundleStr("alert.pwd.pop.content"), preferredStyle: .alert)
-        alert.addTextField {[weak self] (textField) in
-            textField.placeholder = self?.bundleStr("alert.password")
+        let alert = UIAlertController(title: "alert.pwd.pop.title".localized, message: "alert.pwd.pop.content".localized, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "alert.password".localized
         }
-        alert.addAction(UIAlertAction(title: bundleStr("alert.cancel"), style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "alert.cancel".localized, style: .default, handler: { (action) in
             
         }))
-        alert.addAction(UIAlertAction(title: bundleStr("alert.sure"), style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "alert.sure".localized, style: .default, handler: { (action) in
             
         }))
         
@@ -464,7 +458,7 @@ extension SettingVC {
 // MARK: InvitaVC+Ext
 extension InvitaVC {
     func initContent() {
-        self.title = "邀请好友使用"
+        self.title = "me.invite".localized
         
         shareToOneBtn.addTarget(self, action: #selector(buttonMethod(sender:)), for: .touchUpInside)
         shareToGroupBtn.addTarget(self, action: #selector(buttonMethod(sender:)), for: .touchUpInside)
@@ -503,15 +497,15 @@ extension UserInformationVC {
     }
     
     func modifyDisPlayNameAction() {
-        let alert = UIAlertController(title: bundleStr("alert.changeName"), message: "", preferredStyle: .alert)
-        alert.addTextField {[weak self] (textField) in
-            textField.placeholder = self?.bundleStr("alert.updateName.propt")
+        let alert = UIAlertController(title: "alert.changeName".localized, message: "", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "alert.updateName.propt".localized
             textField.text = PlistUtils.loadPlistFilewithFileName(userPlist)[displayName] as? String
         }
-        alert.addAction(UIAlertAction(title: bundleStr("alert.cancel"), style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "alert.cancel".localized, style: .default, handler: { (action) in
             
         }))
-        alert.addAction(UIAlertAction(title: bundleStr("alert.sure"), style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "alert.sure".localized, style: .default, handler: { (action) in
             
         }))
         
@@ -519,7 +513,7 @@ extension UserInformationVC {
     }
     
     func loginOutAction() {
-        let section = JGActionSheetSection.init(title: "", message: bundleStr("alert.note.loginout"), buttonTitles: [bundleStr("alert.sure"), bundleStr("alert.cancel")], buttonStyle: .default)
+        let section = JGActionSheetSection.init(title: "", message: "alert.note.loginout".localized, buttonTitles: ["alert.sure".localized, "alert.cancel".localized], buttonStyle: .default)
         
         section?.setButtonStyle(.red, forButtonAt: 0)
         
@@ -541,7 +535,7 @@ extension UserInformationVC {
     }
     
     func modifyHeadImg() {
-        let section = JGActionSheetSection.init(title: "", message: bundleStr("alert.note.loginout"), buttonTitles: [bundleStr("takePhoto"), bundleStr("takeLibrary"), bundleStr("alert.cancel")], buttonStyle: .default)
+        let section = JGActionSheetSection.init(title: "", message: "alert.note.loginout".localized, buttonTitles: ["takePhoto".localized, "takeLibrary".localized, "alert.cancel".localized], buttonStyle: .default)
         
         section?.setButtonStyle(.red, forButtonAt: 2)
         

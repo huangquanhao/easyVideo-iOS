@@ -1,12 +1,17 @@
 /* 
-  InfoPlist.strings
+  Localizable.strings
   easyVideo-iOS
 
-  Created by quanhao huang on 2020/1/8.
+  Created by quanhao huang on 2020/1/9.
   Copyright © 2020 quanhao huang. All rights reserved.
 */
 "login.note.writePassWord" = "请输入账号密码";
 "login.note.loginIn" = "登录中...";
+
+"me.set" = "设置";
+"me.password" = "密码";
+"me.invite" = "邀请好友使用";
+"me.about" = "关于";
 
 "alert.cantconnert.server" = "无法连接到服务，请检查网络";
 "alert.passworderror1" = "密码错误。账号将在";

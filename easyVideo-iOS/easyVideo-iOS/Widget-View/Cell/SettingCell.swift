@@ -54,7 +54,7 @@ class SettingCell: UITableViewCell {
             cell?.cellTitle.text = "密码"
         }else if row == 2 {
             cell?.img.image = UIImage.init(named: "icon_invite")
-            cell?.cellTitle.text = "邀请好友使用"
+            cell?.cellTitle.text = "me.invite".localized
         }else if row == 3 {
             cell?.img.image = UIImage.init(named: "icon_about")
             cell?.cellTitle.text = "关于"
