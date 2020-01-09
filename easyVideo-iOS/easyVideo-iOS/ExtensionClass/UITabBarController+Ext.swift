@@ -12,6 +12,8 @@ extension BaseTabBarVC {
     
     /// 加载当前VC
     func loadTabBarVC() -> Void {
+        self.delegate = self
+        
         let meetingVC = MeetingVC()
         let meetingNav = UINavigationController(rootViewController: meetingVC)
         let chatVC = ChatVC()

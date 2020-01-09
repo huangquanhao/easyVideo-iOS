@@ -26,6 +26,24 @@ extension BaseViewController {
         }
     }
     
+    func showErrorHud(_ str: String, _ time: TimeInterval) {
+        self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        self.hud.customView = UIImageView(image: UIImage(named: "wrong_tip"))
+        self.hud.detailsLabel.text = str
+        self.hud.mode = .customView
+        self.hud.show(animated: true)
+        self.hud.removeFromSuperViewOnHide = true
+        self.hud.hide(animated: true, afterDelay: time)
+    }
+    
+    func showNormalHud(_ str: String, _ time: TimeInterval) {
+        self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        self.hud.detailsLabel.text = str
+        self.hud.removeFromSuperViewOnHide = true
+        self.hud.show(animated: true)
+        self.hud.hide(animated: true, afterDelay: time)
+    }
+    
     func hiddenNav() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -303,22 +321,11 @@ extension CloudLoginVC {
             break
         case loginBtn:
             if accoutTF.text?.count == 0 || passwordTF.text?.count == 0 {
-                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-                self.hud.detailsLabel.text = "login".localized
-                self.hud.customView = UIImageView(image: UIImage(named: "wrong_tip"))
-                self.hud.mode = .customView
-                self.hud.show(animated: true)
-                self.hud.removeFromSuperViewOnHide = true
-                self.hud.hide(animated: true, afterDelay: 3)
+                showErrorHud("login".localized, 3)
             }else {
                 DDLogWrapper.logInfo("user login server:\(getInfoString("CloudLoginServer")) port:0 accout:\(accoutTF.text!)")
                 userLogin(withServer: getInfoString("CloudLoginServer"), withPort: 0, withAccout: accoutTF.text!, withPassword: passwordTF.text!)
-                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-                self.hud.customView = UIImageView(image: UIImage(named: "wrong_tip"))
-                self.hud.mode = .customView
-                self.hud.detailsLabel.text = "login.note.loginIn".localized
-                self.hud.removeFromSuperViewOnHide = true
-                self.hud.show(animated: true)
+                showNormalHud("login.note.loginIn".localized, 3)
             }
             break
         default: break
@@ -433,6 +440,7 @@ extension MeVC {
         let alert = UIAlertController(title: "alert.pwd.pop.title".localized, message: "alert.pwd.pop.content".localized, preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.placeholder = "alert.password".localized
+            textField.isSecureTextEntry = true
         }
         alert.addAction(UIAlertAction(title: "alert.cancel".localized, style: .default, handler: { (action) in
             
@@ -442,15 +450,9 @@ extension MeVC {
             if textField.text?.count != 0 {
                 let userInfo = PlistUtils.loadPlistFilewithFileName(userPlist)
                 if textField.text == userInfo[password] as? String {
-                    //密码正确
+                    self.pushModifyPasswordVC(animated: true)
                 }else {
-                    self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-                    self.hud.customView = UIImageView(image: UIImage(named: "wrong_tip"))
-                    self.hud.detailsLabel.text = "alert.passwordError".localized
-                    self.hud.mode = .customView
-                    self.hud.show(animated: true)
-                    self.hud.removeFromSuperViewOnHide = true
-                    self.hud.hide(animated: true, afterDelay: 3)
+                    self.showErrorHud("alert.passwordError".localized, 3)
                 }
             }
         }))
@@ -492,6 +494,55 @@ extension InvitaVC {
             break
         default: break
         }
+    }
+}
+
+// MARK: ModifyPasswordVC+Ext
+extension ModifyPasswordVC {
+    func initContent() {
+        self.title = "title.modifyPassword".localized
+        
+        let buttonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(modifyPasswordAction))
+        buttonItem.tintColor = UIColor.init(formHexString: "0xf04848")
+        self.navigationItem.rightBarButtonItem = buttonItem
+        
+        self.view.backgroundColor = UIColor.init(formHexString: "0xf7f7f7")
+    }
+    
+    @objc func modifyPasswordAction() {
+        let cell = tab.cellForRow(at: NSIndexPath.init(row: 0, section: 1) as IndexPath) as! NormalWithTFCell
+        let cell2 = tab.cellForRow(at: NSIndexPath.init(row: 1, section: 1) as IndexPath) as! NormalWithTFCell
+        
+        if cell.cellTF.text?.count == 0 || cell2.cellTF.text?.count == 0 {
+            showErrorHud("alert.pass.note.writeNew".localized, 3)
+        }else if !CheckString(cell.cellTF.text!, 4, 16) {
+            showErrorHud("alert.pass.note.format".localized, 3)
+        }else if cell.cellTF.text != cell2.cellTF.text {
+            showErrorHud("alert.pass.note.notMatch".localized, 3)
+        }else {
+            if appDelegate.evengine.changePassword(appDelegate.evengine.encryptPassword(PlistUtils.loadPlistFilewithFileName(userPlist)[password] as! String), newpassword: appDelegate.evengine.encryptPassword(cell.cellTF.text!)) == 0 {
+                
+                showNormalHud("alert.changepasswordok".localized, 1)
+                self.perform(#selector(loginOut), with: self, afterDelay: 1)
+            }
+        }
+    }
+    
+    func CheckString(_ str: String, _ minLen: Int, _ maxLen: Int) -> Bool {
+        if str.count > maxLen || str.count < minLen {
+            return false
+        }
+        
+        return true
+    }
+    
+    @objc func loginOut() {
+        let user = NSMutableDictionary.init(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
+        user.setValue("NO", forKey: loginState)
+        PlistUtils.savePlistFile(user as! [AnyHashable : Any], withFileName: userPlist)
+        
+        appDelegate.evengine.logout()
+        whetherTheLogin()
     }
 }
 
@@ -545,8 +596,8 @@ extension UserInformationVC {
                 user.setValue("NO", forKey: loginState)
                 PlistUtils.savePlistFile(user as! [AnyHashable : Any], withFileName: userPlist)
                 
-                self?.whetherTheLogin()
                 self?.appDelegate.evengine.logout()
+                self?.whetherTheLogin()
             }
             sheet?.dismiss(animated: true)
         }

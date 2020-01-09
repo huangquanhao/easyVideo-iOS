@@ -20,6 +20,10 @@
 		FC0380F023C0630E001953CA /* CloudJoinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0380EE23C0630E001953CA /* CloudJoinVC.xib */; };
 		FC2DAFCA23C6FEB300F802D7 /* MeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAFCC23C6FEB300F802D7 /* MeVC.xib */; };
 		FC2DAFD323C704BC00F802D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAFD523C704BC00F802D7 /* Localizable.strings */; };
+		FC2DAFDF23C70D5A00F802D7 /* ModifyPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAFDD23C70D5A00F802D7 /* ModifyPasswordVC.swift */; };
+		FC2DAFE023C70D5A00F802D7 /* ModifyPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAFDE23C70D5A00F802D7 /* ModifyPasswordVC.xib */; };
+		FC2DAFE723C7142600F802D7 /* NormalWithTFCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DAFE523C7142600F802D7 /* NormalWithTFCell.swift */; };
+		FC2DAFE823C7142600F802D7 /* NormalWithTFCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2DAFE623C7142600F802D7 /* NormalWithTFCell.xib */; };
 		FC7E672823C56AE300B9CAFA /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7E672723C56AE300B9CAFA /* Manager.m */; };
 		FC7E674723C5844B00B9CAFA /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E674623C5844B00B9CAFA /* String+Ext.swift */; };
 		FC7E674923C5B50F00B9CAFA /* DispatchQueue+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E674823C5B50F00B9CAFA /* DispatchQueue+Ext.swift */; };
@@ -112,6 +116,10 @@
 		FC2DAFD023C6FEB700F802D7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MeVC.strings"; sourceTree = "<group>"; };
 		FC2DAFD423C704BC00F802D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FC2DAFD623C704BF00F802D7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FC2DAFDD23C70D5A00F802D7 /* ModifyPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyPasswordVC.swift; sourceTree = "<group>"; };
+		FC2DAFDE23C70D5A00F802D7 /* ModifyPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyPasswordVC.xib; sourceTree = "<group>"; };
+		FC2DAFE523C7142600F802D7 /* NormalWithTFCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalWithTFCell.swift; sourceTree = "<group>"; };
+		FC2DAFE623C7142600F802D7 /* NormalWithTFCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalWithTFCell.xib; sourceTree = "<group>"; };
 		FC7E672623C56AE300B9CAFA /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		FC7E672723C56AE300B9CAFA /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		FC7E673323C578BA00B9CAFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -211,6 +219,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC2DAFD723C70CDE00F802D7 /* ModifyPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DAFDD23C70D5A00F802D7 /* ModifyPasswordVC.swift */,
+				FC2DAFDE23C70D5A00F802D7 /* ModifyPasswordVC.xib */,
+			);
+			path = ModifyPasswordVC;
+			sourceTree = "<group>";
+		};
 		FC7E672523C56A5900B9CAFA /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +270,8 @@
 				FC7FEAD923C4255100BE940F /* NormalWithImgCell.xib */,
 				FC7FEADC23C42DB000BE940F /* LoginOutCell.swift */,
 				FC7FEADD23C42DB000BE940F /* LoginOutCell.xib */,
+				FC2DAFE523C7142600F802D7 /* NormalWithTFCell.swift */,
+				FC2DAFE623C7142600F802D7 /* NormalWithTFCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -376,6 +395,7 @@
 			children = (
 				FC7FEACF23C423FF00BE940F /* UserInformationVC */,
 				FCBD28AE23C2F5A500E1069F /* SettingVC */,
+				FC2DAFD723C70CDE00F802D7 /* ModifyPasswordVC */,
 				FCBD28B023C2F5BA00E1069F /* InvitaVC */,
 				FCBD28AF23C2F5B700E1069F /* AboutVC */,
 				FCA897A923BF0A5600A0C78E /* MeVC.swift */,
@@ -560,6 +580,7 @@
 				FCA897BD23BF1FD200A0C78E /* PrivateVC.xib in Resources */,
 				FCBD28B523C2F60200E1069F /* SettingVC.xib in Resources */,
 				FCA897A823BF0A4B00A0C78E /* ContactVC.xib in Resources */,
+				FC2DAFE823C7142600F802D7 /* NormalWithTFCell.xib in Resources */,
 				FC7FEAD323C4242C00BE940F /* UserInformationVC.xib in Resources */,
 				FCA8979C23BF0A0F00A0C78E /* MeetingVC.xib in Resources */,
 				FC0380D823C04096001953CA /* AdvancedSettingVC.xib in Resources */,
@@ -573,6 +594,7 @@
 				FCA897A023BF0A2200A0C78E /* JoinMeetingVC.xib in Resources */,
 				FCA897B723BF1F0700A0C78E /* LoginVC.xib in Resources */,
 				FC0380F023C0630E001953CA /* CloudJoinVC.xib in Resources */,
+				FC2DAFE023C70D5A00F802D7 /* ModifyPasswordVC.xib in Resources */,
 				FCBD28C223C3012400E1069F /* SwitchCell.xib in Resources */,
 				FC7FEAE823C452B600BE940F /* rootca.pem in Resources */,
 				FC0380E823C04779001953CA /* SettingCell.xib in Resources */,
@@ -653,6 +675,7 @@
 				FCA897D923BF45F600A0C78E /* AppDelegate+Ext.swift in Sources */,
 				FC7E672823C56AE300B9CAFA /* Manager.m in Sources */,
 				FC0380E323C044D0001953CA /* LoginSettingVC.swift in Sources */,
+				FC2DAFE723C7142600F802D7 /* NormalWithTFCell.swift in Sources */,
 				FCBD28C123C3012400E1069F /* SwitchCell.swift in Sources */,
 				FCA8976D23BEF1B300A0C78E /* AppDelegate.swift in Sources */,
 				FCA897D023BF3D2700A0C78E /* PrivateLoginVC.swift in Sources */,
@@ -672,6 +695,7 @@
 				FCA897B323BF0F0000A0C78E /* UITabBarController+Ext.swift in Sources */,
 				FCA897A723BF0A4B00A0C78E /* ContactVC.swift in Sources */,
 				FC7FEAD623C424EB00BE940F /* NormalWithLbCell.swift in Sources */,
+				FC2DAFDF23C70D5A00F802D7 /* ModifyPasswordVC.swift in Sources */,
 				FC7FEADE23C42DB000BE940F /* LoginOutCell.swift in Sources */,
 				FCA8979823BF092400A0C78E /* BaseViewController.swift in Sources */,
 			);

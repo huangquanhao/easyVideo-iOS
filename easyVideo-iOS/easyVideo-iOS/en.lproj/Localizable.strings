@@ -26,9 +26,20 @@
 "alert.password" = "Please input password";
 "alert.note.loginout" = "Are you sure to log out?";
 "alert.passwordError" = "Password mistake";
+"alert.modifyp.accout" = "Account";
+"alert.modifyp.password" = "New";
+"alert.modifyp.againpassword" = "Confirm";
+"alert.modifyp.input" = "Enter a new password";
+"alert.modifyp.againinput" = "Enter again";
+"alert.pass.note.writeNew" = "Please enter a password to modify";
+"alert.pass.note.format" = "Incorrect password format. It needs to be 4-16 charactors long and does not contain spaces.";
+"alert.pass.note.notMatch" = "Password does not match";
+"alert.changepasswordok" = "Password changed successfully";
 
 "errorcode.1100" = "Invalid user.";
 "error.1112" = "Administrator is not allowed to arccess app. Please use user account.";
 
 "takePhoto" = "Take photo";
 "takeLibrary" = "Choose from Album";
+
+"title.modifyPassword" = "Modify Password";

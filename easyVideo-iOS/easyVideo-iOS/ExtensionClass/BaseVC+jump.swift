@@ -131,6 +131,14 @@ extension BaseViewController {
         self.navigationController?.pushViewController(userInformationVC, animated: flag)
     }
     
+    /// 跳转 ModifyPasswordVC
+    func pushModifyPasswordVC(animated flag:Bool) {
+        let modifyPasswordVC = ModifyPasswordVC()
+        modifyPasswordVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(modifyPasswordVC, animated: flag)
+    }
+    
+    
     // MARK: EVSDKMETHOD
     func userLogin(withServer server: String, withPort port: Int, withAccout accout: String, withPassword password :String) {
         appDelegate.evengine.login(withLocation: server, port: 0, name: accout, password: appDelegate.evengine .encryptPassword(password))
