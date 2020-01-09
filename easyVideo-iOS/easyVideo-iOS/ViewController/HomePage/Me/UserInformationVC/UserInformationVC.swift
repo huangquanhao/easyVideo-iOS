@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class UserInformationVC: BaseViewController, UITableViewDelegate, UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIViewControllerTransitioningDelegate {
 
@@ -64,5 +65,26 @@ class UserInformationVC: BaseViewController, UITableViewDelegate, UITableViewDat
             loginOutAction()
         }
     }
-
+    
+    // MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        imgPicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imgPicker.dismiss(animated: true) {
+            if (info[.originalImage] as? UIImage) != nil {
+                var portraitImg = info[.originalImage] as? UIImage
+                portraitImg = self.imageByScalingToMaxSize(portraitImg!)
+                
+                let headImgPath = "\(FileTools.getDocumentsFailePath())/header.jpg"
+                
+                try? portraitImg!.jpegData(compressionQuality: 1.0)?.write(to: URL.init(string: "file://\(headImgPath)")!, options: .atomicWrite)
+                
+                self.appDelegate.evengine.uploadUserImage(headImgPath)
+                self.tab.reloadData()
+            }
+        }
+    }
+    
 }

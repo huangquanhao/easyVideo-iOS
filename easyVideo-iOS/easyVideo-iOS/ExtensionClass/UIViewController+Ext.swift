@@ -422,7 +422,7 @@ extension MeVC {
     
     func setDisplayContent() {
         let headPath = "\(FileTools.getDocumentsFailePath())/header.jpg"
-        userImg.sd_setImage(with: URL.init(fileURLWithPath: headPath), completed: nil)
+        userImg.image = UIImage.init(contentsOfFile: headPath)
         
         let userInfo = PlistUtils.loadPlistFilewithFileName(userPlist)
         accoutLb.text = userInfo[username] as? String
@@ -558,14 +558,28 @@ extension UserInformationVC {
                     self?.imgPicker.delegate = self
                     self?.imgPicker.allowsEditing = true
                     self?.imgPicker.transitioningDelegate = self
-                    self?.modalPresentationStyle = .custom
+                    self?.imgPicker.modalPresentationStyle = .fullScreen
                     
                     self?.present(self!.imgPicker, animated: true, completion: {
                         DDLogWrapper.logInfo("[UI] user open camera")
                     })
                 }
             }else if indexPath?.row == 1 {
-                
+                if (self?.isPhotoLibraryAvailable())! {
+                    self?.imgPicker.navigationBar.isTranslucent = false
+                    self?.imgPicker.navigationBar.tintColor = UIColor.init(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+                    self?.imgPicker.navigationBar.barStyle = .default
+                    self?.imgPicker.sourceType = .photoLibrary
+                    self?.imgPicker.mediaTypes = [(kUTTypeImage as String)]
+                    self?.imgPicker.delegate = self
+                    self?.imgPicker.allowsEditing = true
+                    self?.imgPicker.transitioningDelegate = self
+                    self?.imgPicker.modalPresentationStyle = .fullScreen
+                    
+                    self?.present(self!.imgPicker, animated: true, completion: {
+                        DDLogWrapper.logInfo("[UI] user open PhotoLibrary")
+                    })
+                }
             }
             sheet?.dismiss(animated: true)
         }
@@ -598,5 +612,79 @@ extension UserInformationVC {
     
     func isFrontCameraAvailable() -> Bool {
         return UIImagePickerController.isCameraDeviceAvailable(.front)
+    }
+    
+    func isPhotoLibraryAvailable() -> Bool {
+        return UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+    }
+    
+    func imageByScalingToMaxSize(_ sourceImage: UIImage) -> UIImage {
+        if sourceImage.size.width < 640.0 {
+            return sourceImage
+        }
+        
+        var btWidth = 0.0
+        var btHeight = 0.0
+        
+        if sourceImage.size.width > sourceImage.size.height {
+            btHeight = 640.0
+            btWidth = Double(sourceImage.size.width * (640.0 / sourceImage.size.height))
+        }else {
+            btWidth = 640.0
+            btHeight = Double(sourceImage.size.width * (640.0 / sourceImage.size.height))
+        }
+        
+        let targetSize = CGSize(width: btWidth, height: btHeight)
+        
+        return imageByScalingAndCroppingForSourceImage(sourceImage, targetSize)
+    }
+    
+    func imageByScalingAndCroppingForSourceImage(_ sourceImage: UIImage,_ targetSize: CGSize) -> UIImage {
+        var newImage:UIImage?
+        let imageSize = sourceImage.size
+        let width = imageSize.width
+        let height = imageSize.height
+        let targetWidth = targetSize.width
+        let targetHeight = targetSize.height
+        var scaleFactor = 0.0
+        var scaledWidth = targetWidth
+        var scaledHeight = targetHeight
+        var thumbnailPoint = CGPoint(x: 0.0, y: 0.0)
+        
+        if __CGSizeEqualToSize(imageSize, targetSize) == false {
+            let widthFactor = targetWidth / width
+            let heightFactor = targetHeight / height
+            
+            if widthFactor > heightFactor {
+                scaleFactor = Double(widthFactor)
+            }else {
+                scaleFactor = Double(heightFactor)
+            }
+            
+            scaledWidth  = width * CGFloat(scaleFactor)
+            scaledHeight = height * CGFloat(scaleFactor)
+            
+            if widthFactor > heightFactor {
+                thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5
+            }else if widthFactor < heightFactor {
+                thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5
+            }
+        }
+        
+        UIGraphicsBeginImageContext(targetSize)
+        var thumbnailRect = CGRect.zero
+        thumbnailRect.origin = thumbnailPoint
+        thumbnailRect.size.width  = scaledWidth
+        thumbnailRect.size.height = scaledHeight
+        
+        sourceImage.draw(in: thumbnailRect)
+        newImage = UIGraphicsGetImageFromCurrentImageContext()
+        if (newImage != nil) {
+            
+        }
+        
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
 }

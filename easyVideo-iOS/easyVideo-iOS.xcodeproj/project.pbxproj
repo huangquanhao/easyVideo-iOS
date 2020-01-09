@@ -106,6 +106,7 @@
 		FC0380EA23C062FD001953CA /* CloudLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudLoginVC.xib; sourceTree = "<group>"; };
 		FC0380ED23C0630E001953CA /* CloudJoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudJoinVC.swift; sourceTree = "<group>"; };
 		FC0380EE23C0630E001953CA /* CloudJoinVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudJoinVC.xib; sourceTree = "<group>"; };
+		FC2DAFC823C6D37F00F802D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FC7E672623C56AE300B9CAFA /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		FC7E672723C56AE300B9CAFA /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		FC7E673123C5789600B9CAFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		E50B9E295A8ECCF4EFD918FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC2DAFC823C6D37F00F802D7 /* CoreGraphics.framework */,
 				FC7FEAE123C430F700BE940F /* evsdk.framework */,
 				7C66CB153E2204599DA6CCAB /* libPods-easyVideo-iOS.a */,
 			);
