@@ -10,6 +10,8 @@ import UIKit
 
 class ModifyPasswordVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
+    public var block : (()->())?
+    
     @IBOutlet weak var tab: UITableView!
     
     override func viewDidLoad() {

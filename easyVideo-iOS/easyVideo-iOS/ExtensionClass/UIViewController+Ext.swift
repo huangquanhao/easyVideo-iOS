@@ -537,12 +537,9 @@ extension ModifyPasswordVC {
     }
     
     @objc func loginOut() {
-        let user = NSMutableDictionary.init(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
-        user.setValue("NO", forKey: loginState)
-        PlistUtils.savePlistFile(user as! [AnyHashable : Any], withFileName: userPlist)
-        
-        appDelegate.evengine.logout()
-        whetherTheLogin()
+        if block != nil {
+            block!()
+        }
     }
 }
 
@@ -591,13 +588,9 @@ extension UserInformationVC {
         let sheet = JGActionSheet.init(sections: [section!])
         sheet?.buttonPressedBlock = {[weak self] (actionSheet, indexPath) in
             if indexPath?.row == 0 {
-                
-                let user = NSMutableDictionary.init(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
-                user.setValue("NO", forKey: loginState)
-                PlistUtils.savePlistFile(user as! [AnyHashable : Any], withFileName: userPlist)
-                
-                self?.appDelegate.evengine.logout()
-                self?.whetherTheLogin()
+                if self?.block != nil {
+                    self?.block!()
+                }
             }
             sheet?.dismiss(animated: true)
         }

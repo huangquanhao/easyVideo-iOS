@@ -79,7 +79,7 @@ class BaseViewController: UIViewController, EVEngineDelegate {
                 self.hud.hide(animated: true, afterDelay: 3)
             }else if err.type == .server {
                 if err.code == 1101 {
-                    let alert = "\("alert.passworderror1".localized)\(String((err.args?[0])!))\("alert.passworderror2".localized)"
+                    let alert = "\("alert.passworderror1".localized) \(String((err.args?[0])!)) \("alert.passworderror2".localized)"
                     self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                     self.hud.customView = UIImageView.init(image: UIImage.init(named: "wrong_tip"))
                     self.hud.detailsLabel.text = alert

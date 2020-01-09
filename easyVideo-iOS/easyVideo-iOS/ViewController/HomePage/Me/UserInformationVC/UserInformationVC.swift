@@ -11,6 +11,8 @@ import MobileCoreServices
 
 class UserInformationVC: BaseViewController, UITableViewDelegate, UITableViewDataSource,UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIViewControllerTransitioningDelegate {
 
+    public var block : (()->())?
+    
     @IBOutlet weak var tab: UITableView!
     let imgPicker = UIImagePickerController()
     

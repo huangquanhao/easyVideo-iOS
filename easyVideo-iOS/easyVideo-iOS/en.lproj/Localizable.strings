@@ -14,7 +14,7 @@
 "me.about" = "About";
 
 "alert.cantconnert.server" = "Unable to connect to the server. Please check your network connection.";
-"alert.passworderror1" = "Incorrect password. Your account will be locked (for 5 minutes) after";
+"alert.passworderror1" = "Incorrect password. Your account will be locked for 5 minutes after";
 "alert.passworderror2" = "more failed attempts.";
 "alert.passworderror3" = "Your account has been disabled. Please contact your administrator.";
 "alert.changeName" = "Rename";

@@ -128,12 +128,34 @@ extension BaseViewController {
     func pushUserInformationVC(animated flag:Bool) {
         let userInformationVC = UserInformationVC()
         userInformationVC.hidesBottomBarWhenPushed = true
+        userInformationVC.block = {
+            let user = NSMutableDictionary.init(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
+            user.setValue("NO", forKey: loginState)
+            PlistUtils.savePlistFile(user as! [AnyHashable : Any], withFileName: userPlist)
+            
+            self.appDelegate.evengine.logout()
+            self.whetherTheLogin()
+            
+            self.poptoRootPage(animated: true)
+            self.tabBarController?.selectedIndex = 0
+        }
         self.navigationController?.pushViewController(userInformationVC, animated: flag)
     }
     
     /// 跳转 ModifyPasswordVC
     func pushModifyPasswordVC(animated flag:Bool) {
         let modifyPasswordVC = ModifyPasswordVC()
+        modifyPasswordVC.block = {
+            let user = NSMutableDictionary.init(dictionary: PlistUtils.loadPlistFilewithFileName(userPlist))
+            user.setValue("NO", forKey: loginState)
+            PlistUtils.savePlistFile(user as! [AnyHashable : Any], withFileName: userPlist)
+            
+            self.appDelegate.evengine.logout()
+            self.whetherTheLogin()
+            
+            self.poptoRootPage(animated: true)
+            self.tabBarController?.selectedIndex = 0
+        }
         modifyPasswordVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(modifyPasswordVC, animated: flag)
     }
